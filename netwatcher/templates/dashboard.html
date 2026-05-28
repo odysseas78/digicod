@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NetWatcher</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header>
+  <h1>NetWatcher</h1>
+  <nav>
+    <a href="/">Dashboard</a>
+    <a href="/wireguard">WireGuard</a>
+    <a href="/settings">Einstellungen</a>
+    <a href="/api/latest">API</a>
+  </nav>
+</header>
+<main>
+  <section class="cards">
+    <div class="card"><strong>Scan läuft</strong><span>{{ 'ja' if state.scan_running else 'nein' }}</span></div>
+    <div class="card"><strong>Letzter Start</strong><span>{{ state.last_scan_started or '-' }}</span></div>
+    <div class="card"><strong>Letztes Ende</strong><span>{{ state.last_scan_finished or '-' }}</span></div>
+    <div class="card"><strong>Entdeckte Hosts</strong><span>{{ discovered_count }}</span></div>
+  </section>
+
+  {% if state.last_error %}<p class="error">{{ state.last_error }}</p>{% endif %}
+
+  <form method="post" action="/scan" class="toolbar">
+    <button type="submit">Jetzt scannen</button>
+    <span>Es werden nur aktive Hosts mit offenen TCP-Ports angezeigt.</span>
+  </form>
+
+  <section class="panel">
+    <h2>Aktive/offene Hosts</h2>
+    <table>
+      <thead>
+        <tr><th>IP</th><th>Hostname</th><th>Offene Ports</th><th>Quelle</th><th>Latenz</th></tr>
+      </thead>
+      <tbody>
+        {% for row in rows %}
+        <tr>
+          <td><code>{{ row.ip }}</code></td>
+          <td>{{ row.hostname or '-' }}</td>
+          <td>{{ row.open_ports }}</td>
+          <td>{{ row.source }}</td>
+          <td>{{ '%.1f'|format(row.latency_ms or 0) }} ms</td>
+        </tr>
+        {% else %}
+        <tr><td colspan="5" class="muted">Noch keine offenen Hosts gefunden.</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </section>
+</main>
+</body>
+</html>

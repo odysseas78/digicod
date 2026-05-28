@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Einstellungen - NetWatcher</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header>
+  <h1>Einstellungen</h1>
+  <nav><a href="/">Dashboard</a><a href="/wireguard">WireGuard</a><a href="/settings">Einstellungen</a></nav>
+</header>
+<main>
+  <section class="panel">
+    <form method="post" class="formgrid">
+      <label>Scan-Intervall Sekunden
+        <input name="interval_seconds" value="{{ config.scanner.interval_seconds }}">
+      </label>
+      <label>Ports, Komma oder neue Zeile
+        <textarea name="ports" rows="5">{{ config.scanner.ports|join(', ') }}</textarea>
+      </label>
+      <label>Manuelle Ziele, CIDR/IP, Komma oder neue Zeile
+        <textarea name="manual_targets" rows="5">{{ config.scanner.manual_targets|join(', ') }}</textarea>
+      </label>
+      <label>Ausgeschlossene Ziele, CIDR/IP, Komma oder neue Zeile
+        <textarea name="exclude_targets" rows="5">{{ config.scanner.exclude_targets|default([])|join(', ') }}</textarea>
+      </label>
+      <label class="check">
+        <input type="checkbox" name="private_only" {% if config.scanner.private_only is not defined or config.scanner.private_only %}checked{% endif %}>
+        Nur private IPv4-Netze scannen, öffentliche IPs automatisch überspringen
+      </label>
+      <label>WireGuard Config Pfad
+        <input name="wg_config_path" value="{{ config.wireguard.config_path }}">
+      </label>
+      <label class="check">
+        <input type="checkbox" name="auto_apply" {% if config.wireguard.auto_apply %}checked{% endif %}>
+        Nach Änderung automatisch wg-quick down/up ausführen
+      </label>
+      <button type="submit">Speichern</button>
+    </form>
+  </section>
+</main>
+</body>
+</html>

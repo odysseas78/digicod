@@ -1,0 +1,18 @@
+[Unit]
+Description=NetWatcher LXD/WireGuard scanner and UI
+After=network-online.target lxd.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/netwatcher
+ExecStart=/opt/netwatcher/.venv/bin/python /opt/netwatcher/app.py
+Restart=always
+RestartSec=5
+# WireGuard config editing usually needs root. If you run as another user,
+# give only the required sudo permissions for wg/wg-quick and /etc/wireguard.
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target

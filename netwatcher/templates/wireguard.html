@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WireGuard - NetWatcher</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header>
+  <h1>WireGuard</h1>
+  <nav><a href="/">Dashboard</a><a href="/wireguard">WireGuard</a><a href="/settings">Einstellungen</a></nav>
+</header>
+<main>
+  {% if error %}<p class="error">{{ error }}</p>{% endif %}
+  {% if ok %}<p class="ok">{{ ok }}</p>{% endif %}
+
+  <section class="panel">
+    <h2>Server Config</h2>
+    <p><strong>Datei:</strong> <code>{{ path }}</code></p>
+    <div class="grid2">
+      <div><strong>Address</strong><br><code>{{ parsed.interface.Address or '-' }}</code></div>
+      <div><strong>ListenPort</strong><br><code>{{ parsed.interface.ListenPort or '-' }}</code></div>
+      <div><strong>DNS</strong><br><code>{{ parsed.interface.DNS or '-' }}</code></div>
+      <div><strong>Peers</strong><br><code>{{ parsed.peers|length }}</code></div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>Neue Schlüssel generieren</h2>
+    <p class="muted">Für einen neuen Client: PrivateKey bleibt beim Client, PublicKey + PresharedKey kommt hier in den Server-Peer.</p>
+    <button type="button" onclick="genKeys()">Schlüssel generieren</button>
+    <pre id="keys" class="pre"></pre>
+  </section>
+
+  <section class="panel">
+    <h2>Neuen Peer hinzufügen</h2>
+    <form method="post" action="/wireguard/peer/add" class="formgrid">
+      <label>PublicKey <input name="public_key" required></label>
+      <label>PresharedKey <input name="preshared_key"></label>
+      <label>AllowedIPs <input name="allowed_ips" placeholder="10.0.0.5/32, 10.251.167.0/24" required></label>
+      <label>Endpoint optional <input name="endpoint" placeholder="host:51820"></label>
+      <label>PersistentKeepalive optional <input name="persistent_keepalive" placeholder="25"></label>
+      <button type="submit">Peer speichern</button>
+    </form>
+  </section>
+
+  <section class="panel">
+    <h2>Peers bearbeiten</h2>
+    {% for peer in parsed.peers %}
+      <div class="peer">
+        <form method="post" action="/wireguard/peer/update/{{ loop.index0 }}" class="formgrid">
+          <label>PublicKey <input value="{{ peer.PublicKey }}" disabled></label>
+          <label>PresharedKey <input name="preshared_key" value="{{ peer.PresharedKey or '' }}"></label>
+          <label>AllowedIPs <input name="allowed_ips" value="{{ peer.AllowedIPs or '' }}" required></label>
+          <label>Endpoint <input name="endpoint" value="{{ peer.Endpoint or '' }}"></label>
+          <label>PersistentKeepalive <input name="persistent_keepalive" value="{{ peer.PersistentKeepalive or '' }}"></label>
+          <button type="submit">Aktualisieren</button>
+        </form>
+        <form method="post" action="/wireguard/peer/delete/{{ loop.index0 }}" onsubmit="return confirm('Peer wirklich löschen?')">
+          <button class="danger" type="submit">Peer löschen</button>
+        </form>
+      </div>
+    {% else %}
+      <p class="muted">Keine Peers gefunden.</p>
+    {% endfor %}
+  </section>
+</main>
+<script>
+async function genKeys() {
+  const res = await fetch('/wireguard/generate');
+  const data = await res.json();
+  document.getElementById('keys').textContent = JSON.stringify(data, null, 2);
+}
+</script>
+</body>
+</html>
