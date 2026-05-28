@@ -1,0 +1,9 @@
+name: digicod_eu
+order: 10
+domains:
+  - digicod.eu
+https_routes:
+  - match:
+      prefix: /
+    route:
+      cluster: service_cluster

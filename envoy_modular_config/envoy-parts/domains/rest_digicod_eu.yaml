@@ -1,0 +1,10 @@
+name: rest_digicod_eu
+order: 30
+domains:
+  - rest.digicod.eu
+https_routes:
+  - match:
+      prefix: /
+    route:
+      cluster: gunicorn_cluster
+      prefix_rewrite: /rest/
