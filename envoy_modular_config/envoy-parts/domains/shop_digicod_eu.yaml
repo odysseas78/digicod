@@ -1,7 +1,7 @@
-name: rest_digicod_eu
+name: shop_digicod_eu
 order: 30
 domains:
-  - rest.digicod.eu
+  - shop.digicod.eu
 https_routes:
   - match:
       prefix: /
