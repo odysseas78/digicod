@@ -1,0 +1,152 @@
+admin:
+  access_log_path: /etc/envoy/dcfront/dcfront_access.log
+  address:
+    socket_address:
+      protocol: TCP
+      address: 0.0.0.0
+      port_value: 9901
+static_resources:
+  listeners:
+  - name: listener_http
+    address:
+      socket_address:
+        address: 0.0.0.0
+        port_value: 80
+    filter_chains:
+    - filters:
+      - name: envoy.filters.network.http_connection_manager
+        typed_config:
+          '@type': type.googleapis.com/envoy.extensions.filters.network.http_connection_manager.v3.HttpConnectionManager
+          stat_prefix: ingress_http
+          use_remote_address: true
+          xff_num_trusted_hops: 1
+          generate_request_id: true
+          preserve_external_request_id: true
+          codec_type: AUTO
+          route_config:
+            name: http_redirects
+            virtual_hosts:
+            - name: digicod_eu_http_redirect
+              domains:
+              - digicod.eu
+              routes:
+              - match:
+                  prefix: /
+                redirect:
+                  scheme_redirect: https
+                  response_code: PERMANENT_REDIRECT
+            - name: api_digicod_eu_http_redirect
+              domains:
+              - api.digicod.eu
+              routes:
+              - match:
+                  prefix: /
+                redirect:
+                  scheme_redirect: https
+                  response_code: PERMANENT_REDIRECT
+            - name: rest_digicod_eu_http_redirect
+              domains:
+              - rest.digicod.eu
+              routes:
+              - match:
+                  prefix: /
+                redirect:
+                  scheme_redirect: https
+                  response_code: PERMANENT_REDIRECT
+          http_filters:
+          - name: envoy.filters.http.router
+            typed_config:
+              '@type': type.googleapis.com/envoy.extensions.filters.http.router.v3.Router
+  - name: listener_https
+    address:
+      socket_address:
+        protocol: TCP
+        address: 0.0.0.0
+        port_value: 443
+    filter_chains:
+    - filters:
+      - name: envoy.filters.network.http_connection_manager
+        typed_config:
+          '@type': type.googleapis.com/envoy.extensions.filters.network.http_connection_manager.v3.HttpConnectionManager
+          stat_prefix: ingress_https
+          use_remote_address: true
+          xff_num_trusted_hops: 1
+          generate_request_id: true
+          preserve_external_request_id: true
+          codec_type: AUTO
+          route_config:
+            name: https_routes
+            response_headers_to_add:
+            - header:
+                key: response-xxxxcodes
+                value: '%RESPONSE_CODE%'
+            virtual_hosts:
+            - name: digicod_eu
+              domains:
+              - digicod.eu
+              routes:
+              - match:
+                  prefix: /
+                route:
+                  cluster: service_cluster
+            - name: api_digicod_eu
+              domains:
+              - api.digicod.eu
+              routes:
+              - match:
+                  prefix: /
+                route:
+                  cluster: gunicorn_cluster
+            - name: rest_digicod_eu
+              domains:
+              - rest.digicod.eu
+              routes:
+              - match:
+                  prefix: /
+                route:
+                  cluster: gunicorn_cluster
+          http_filters:
+          - name: envoy.filters.http.router
+            typed_config:
+              '@type': type.googleapis.com/envoy.extensions.filters.http.router.v3.Router
+          http2_protocol_options:
+            allow_connect: true
+      transport_socket:
+        name: envoy.transport_sockets.tls
+        typed_config:
+          '@type': type.googleapis.com/envoy.extensions.transport_sockets.tls.v3.DownstreamTlsContext
+          common_tls_context:
+            tls_certificates:
+            - certificate_chain:
+                filename: /etc/letsencrypt/live/digicod.eu/fullchain.pem
+              private_key:
+                filename: /etc/letsencrypt/live/digicod.eu/privkey.pem
+  clusters:
+  - name: service_cluster
+    connect_timeout: 0.25s
+    type: STATIC
+    lb_policy: ROUND_ROBIN
+    load_assignment:
+      cluster_name: service_cluster
+      endpoints:
+      - lb_endpoints:
+        - endpoint:
+            address:
+              socket_address:
+                protocol: TCP
+                address: 10.251.167.51
+                port_value: 3000
+  - name: gunicorn_cluster
+    connect_timeout: 0.25s
+    type: STATIC
+    lb_policy: ROUND_ROBIN
+    load_assignment:
+      cluster_name: gunicorn_cluster
+      endpoints:
+      - lb_endpoints:
+        - endpoint:
+            address:
+              socket_address:
+                protocol: TCP
+                address: 10.251.167.114
+                port_value: 8080
