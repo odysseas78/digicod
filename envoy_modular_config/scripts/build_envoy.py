@@ -54,6 +54,14 @@ def require_list(value: Any, path: Path, key: str) -> list[Any]:
     return value
 
 
+def optional_mapping(value: Any, path: Path, key: str) -> dict[str, Any] | None:
+    if value is None:
+        return None
+    if not isinstance(value, dict):
+        raise TypeError(f"{key} must be a mapping in {path}")
+    return value
+
+
 def load_domains() -> list[dict[str, Any]]:
     domain_files = sorted(DOMAINS_DIR.glob("*.yaml"))
     if not domain_files:
@@ -89,6 +97,18 @@ def load_domains() -> list[dict[str, Any]]:
         if http_routes is not None:
             http_routes = require_list(http_routes, path, "http_routes")
 
+        typed_per_filter_config = optional_mapping(data.get("typed_per_filter_config"), path, "typed_per_filter_config")
+        http_typed_per_filter_config = optional_mapping(
+            data.get("http_typed_per_filter_config", typed_per_filter_config),
+            path,
+            "http_typed_per_filter_config",
+        )
+        https_typed_per_filter_config = optional_mapping(
+            data.get("https_typed_per_filter_config", typed_per_filter_config),
+            path,
+            "https_typed_per_filter_config",
+        )
+
         domains.append(
             {
                 "name": name,
@@ -96,6 +116,8 @@ def load_domains() -> list[dict[str, Any]]:
                 "domains": hostnames,
                 "https_routes": https_routes,
                 "http_routes": http_routes,
+                "http_typed_per_filter_config": http_typed_per_filter_config,
+                "https_typed_per_filter_config": https_typed_per_filter_config,
                 "path": path,
             }
         )
@@ -114,13 +136,22 @@ def build_virtual_hosts(domains: list[dict[str, Any]], route_key: str) -> list[d
             routes = domain["https_routes"]
             name = domain["name"]
 
-        virtual_hosts.append(
-            {
-                "name": name,
-                "domains": copy.deepcopy(domain["domains"]),
-                "routes": copy.deepcopy(routes),
-            }
+        virtual_host = {
+            "name": name,
+            "domains": copy.deepcopy(domain["domains"]),
+            "routes": copy.deepcopy(routes),
+        }
+
+        typed_per_filter_config_key = (
+            "http_typed_per_filter_config"
+            if route_key == "http_routes"
+            else "https_typed_per_filter_config"
         )
+        typed_per_filter_config = domain.get(typed_per_filter_config_key)
+        if typed_per_filter_config is not None:
+            virtual_host["typed_per_filter_config"] = copy.deepcopy(typed_per_filter_config)
+
+        virtual_hosts.append(virtual_host)
 
     return virtual_hosts
 

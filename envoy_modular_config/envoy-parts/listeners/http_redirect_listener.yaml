@@ -18,6 +18,17 @@ listener:
             route_config:
               __include_route_config__: http_redirects
             http_filters:
+              - name: envoy.filters.http.rbac
+                typed_config:
+                  "@type": type.googleapis.com/envoy.extensions.filters.http.rbac.v3.RBAC
+                  rules:
+                    action: ALLOW
+                    policies:
+                      allow_all_by_default:
+                        permissions:
+                          - any: true
+                        principals:
+                          - any: true
               - name: envoy.filters.http.router
                 typed_config:
                   "@type": type.googleapis.com/envoy.extensions.filters.http.router.v3.Router

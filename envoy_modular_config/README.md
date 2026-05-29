@@ -12,6 +12,7 @@ envoy_modular_config/
 │   ├── listeners/https_listener.yaml
 │   ├── domains/digicod_eu.yaml
 │   ├── domains/api_digicod_eu.yaml
+│   ├── domains/local_digicod_eu.yaml
 │   ├── domains/rest_digicod_eu.yaml
 │   └── clusters/upstreams.yaml
 ├── generated/
@@ -29,6 +30,7 @@ Die Domain-Dateien sind die normalen Bearbeitungspunkte:
 - `domains/digicod_eu.yaml`: `digicod.eu` -> `service_cluster`
 - `domains/api_digicod_eu.yaml`: `api.digicod.eu` -> `gunicorn_cluster`
 - `domains/rest_digicod_eu.yaml`: `rest.digicod.eu` -> `gunicorn_cluster`
+- `domains/local_digicod_eu.yaml`: `local.digicod.eu` -> `gunicorn_cluster`, nur fuer `10.0.0.0/24` und `127.0.0.1`
 
 Der Backend-Service sieht damit die Subdomain-Pfade direkt ab `/`. Beispiel: `https://api.digicod.eu/products` kommt in Django als `/products` an.
 
