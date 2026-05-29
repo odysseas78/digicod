@@ -1,9 +1,16 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 import copy
+import sys
 from pathlib import Path
 from typing import Any
-import yaml
+
+try:
+    import yaml
+except ModuleNotFoundError as exc:
+    if exc.name != "yaml":
+        raise
+    yaml = None
 
 ROOT = Path(__file__).resolve().parents[1]
 ADMIN_FILE = ROOT / "envoy-parts/admin/admin.yaml"
@@ -38,7 +45,32 @@ HTTPS_RESPONSE_HEADERS = [
 ]
 
 
+def require_pyyaml() -> None:
+    if yaml is not None:
+        return
+
+    print(
+        "\n".join(
+            [
+                "Missing dependency: PyYAML is not installed for this Python interpreter.",
+                f"Interpreter: {sys.executable}",
+                "",
+                "On this Windows setup, `python3` can point to a different Python than `python`.",
+                "Try one of these commands from envoy_modular_config:",
+                "  python scripts/build_envoy.py",
+                "  py -3 scripts/build_envoy.py",
+                "",
+                "If you really want to use this interpreter, install PyYAML into it:",
+                f"  {sys.executable} -m pip install PyYAML",
+            ]
+        ),
+        file=sys.stderr,
+    )
+    raise SystemExit(1)
+
+
 def load_yaml(path: Path) -> dict[str, Any]:
+    require_pyyaml()
     with path.open("r", encoding="utf-8") as f:
         data = yaml.safe_load(f)
     if data is None:
@@ -62,6 +94,32 @@ def optional_mapping(value: Any, path: Path, key: str) -> dict[str, Any] | None:
     return value
 
 
+def load_hostnames(data: dict[str, Any], path: Path) -> list[str]:
+    hostnames: list[str] = []
+
+    explicit_domains = data.get("domains")
+    if explicit_domains is not None:
+        domains = require_list(explicit_domains, path, "domains")
+        hostnames.extend(domains)
+
+    subdomains = data.get("subdomains")
+    if subdomains is not None:
+        subdomain_list = require_list(subdomains, path, "subdomains")
+        base_domain = data.get("base_domain")
+        if not isinstance(base_domain, str) or not base_domain:
+            raise TypeError(f"base_domain must be a non-empty string when subdomains is set in {path}")
+
+        for subdomain in subdomain_list:
+            if not isinstance(subdomain, str) or not subdomain:
+                raise TypeError(f"subdomains must contain non-empty strings in {path}")
+            hostnames.append(f"{subdomain}.{base_domain}")
+
+    if not hostnames or not all(isinstance(hostname, str) and hostname for hostname in hostnames):
+        raise TypeError(f"domains or subdomains must contain non-empty strings in {path}")
+
+    return hostnames
+
+
 def load_domains() -> list[dict[str, Any]]:
     domain_files = sorted(DOMAINS_DIR.glob("*.yaml"))
     if not domain_files:
@@ -81,9 +139,7 @@ def load_domains() -> list[dict[str, Any]]:
             raise ValueError(f"Duplicate domain config name {name!r} in {path}")
         seen_names.add(name)
 
-        hostnames = require_list(data.get("domains"), path, "domains")
-        if not hostnames or not all(isinstance(hostname, str) and hostname for hostname in hostnames):
-            raise TypeError(f"domains must contain non-empty strings in {path}")
+        hostnames = load_hostnames(data, path)
         for hostname in hostnames:
             if hostname in seen_domains:
                 raise ValueError(f"Domain {hostname!r} is configured in both {seen_domains[hostname]} and {path}")
@@ -204,6 +260,8 @@ def replace_route_includes(
 
 
 def main() -> None:
+    require_pyyaml()
+
     admin = load_yaml(ADMIN_FILE)
     http_listener = load_yaml(HTTP_LISTENER_FILE)["listener"]
     https_listener = load_yaml(HTTPS_LISTENER_FILE)["listener"]

@@ -1,9 +1,0 @@
-name: api_digicod_eu
-order: 20
-domains:
-  - api.digicod.eu
-https_routes:
-  - match:
-      prefix: /
-    route:
-      cluster: gunicorn_cluster

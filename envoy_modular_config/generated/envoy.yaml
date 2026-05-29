@@ -35,18 +35,13 @@ static_resources:
                 redirect:
                   scheme_redirect: https
                   response_code: PERMANENT_REDIRECT
-            - name: api_digicod_eu_http_redirect
+            - name: gunicorn_subdomains_digicod_eu_http_redirect
               domains:
               - api.digicod.eu
-              routes:
-              - match:
-                  prefix: /
-                redirect:
-                  scheme_redirect: https
-                  response_code: PERMANENT_REDIRECT
-            - name: rest_digicod_eu_http_redirect
-              domains:
-              - rest.digicod.eu
+              - shop.digicod.eu
+              - accounts.digicod.eu
+              - orders.digicod.eu
+              - products.digicod.eu
               routes:
               - match:
                   prefix: /
@@ -126,17 +121,13 @@ static_resources:
                   prefix: /
                 route:
                   cluster: service_cluster
-            - name: api_digicod_eu
+            - name: gunicorn_subdomains_digicod_eu
               domains:
               - api.digicod.eu
-              routes:
-              - match:
-                  prefix: /
-                route:
-                  cluster: gunicorn_cluster
-            - name: rest_digicod_eu
-              domains:
-              - rest.digicod.eu
+              - shop.digicod.eu
+              - accounts.digicod.eu
+              - orders.digicod.eu
+              - products.digicod.eu
               routes:
               - match:
                   prefix: /

@@ -1,9 +1,0 @@
-name: shop_digicod_eu
-order: 30
-domains:
-  - shop.digicod.eu
-https_routes:
-  - match:
-      prefix: /
-    route:
-      cluster: gunicorn_cluster
