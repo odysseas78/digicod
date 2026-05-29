@@ -29,7 +29,6 @@ static_resources:
             - name: digicod_eu_http_redirect
               domains:
               - digicod.eu
-              - www.digicod.eu
               routes:
               - match:
                   prefix: /
@@ -49,6 +48,32 @@ static_resources:
                 redirect:
                   scheme_redirect: https
                   response_code: PERMANENT_REDIRECT
+            - name: local_digicod_eu_http_redirect
+              domains:
+              - local.digicod.eu
+              routes:
+              - match:
+                  prefix: /
+                redirect:
+                  scheme_redirect: https
+                  response_code: PERMANENT_REDIRECT
+              typed_per_filter_config:
+                envoy.filters.http.rbac:
+                  '@type': type.googleapis.com/envoy.extensions.filters.http.rbac.v3.RBACPerRoute
+                  rbac:
+                    rules:
+                      action: ALLOW
+                      policies:
+                        local_network_only:
+                          permissions:
+                          - any: true
+                          principals:
+                          - direct_remote_ip:
+                              address_prefix: 10.0.0.0
+                              prefix_len: 24
+                          - direct_remote_ip:
+                              address_prefix: 127.0.0.1
+                              prefix_len: 32
           http_filters:
           - name: envoy.filters.http.rbac
             typed_config:
@@ -85,26 +110,46 @@ static_resources:
             name: https_routes
             virtual_hosts:
             - name: digicod_eu
-              domains:
-              - digicod.eu
-              - www.digicod.eu
+              domains: [ "://digicod.eu", "://www.digicod.eu" ]
               routes:
               - match:
                   prefix: /
                 route:
                   cluster: service_cluster
             - name: gunicorn_subdomains_digicod_eu
-              domains:
-              - api.digicod.eu
-              - shop.digicod.eu
-              - accounts.digicod.eu
-              - orders.digicod.eu
-              - products.digicod.eu
+              domains: 
+              - [ "://api.digicod.eu", "://shop.digicod.eu", "://accounts.digicod.eu", "://orders.digicod.eu", "://products.digicod.eu" ]
+              - [ "://www.api.digicod.eu", "://www.shop.digicod.eu", "://www.accounts.digicod.eu", "://www.orders.digicod.eu", "://www.products.digicod.eu" ]
               routes:
               - match:
                   prefix: /
                 route:
                   cluster: gunicorn_cluster
+            - name: local_digicod_eu
+              domains:
+              - local.digicod.eu
+              routes:
+              - match:
+                  prefix: /
+                route:
+                  cluster: gunicorn_cluster
+              typed_per_filter_config:
+                envoy.filters.http.rbac:
+                  '@type': type.googleapis.com/envoy.extensions.filters.http.rbac.v3.RBACPerRoute
+                  rbac:
+                    rules:
+                      action: ALLOW
+                      policies:
+                        local_network_only:
+                          permissions:
+                          - any: true
+                          principals:
+                          - direct_remote_ip:
+                              address_prefix: 10.0.0.0
+                              prefix_len: 24
+                          - direct_remote_ip:
+                              address_prefix: 127.0.0.1
+                              prefix_len: 32
           http_filters:
           - name: envoy.filters.http.rbac
             typed_config:
@@ -145,7 +190,7 @@ static_resources:
             address:
               socket_address:
                 protocol: TCP
-                address: 10.251.167.51
+                address: dcfront.loc
                 port_value: 3000
   - name: gunicorn_cluster
     connect_timeout: 0.25s
@@ -159,5 +204,5 @@ static_resources:
             address:
               socket_address:
                 protocol: TCP
-                address: 10.251.167.114
+                address: dcback.loc
                 port_value: 8080
