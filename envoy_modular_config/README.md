@@ -10,6 +10,8 @@ envoy_modular_config/
 │   ├── admin/admin.yaml
 │   ├── listeners/http_redirect_listener.yaml
 │   ├── listeners/https_listener.yaml
+│   ├── routes/http_redirects.yaml
+│   ├── routes/https_routes.yaml
 │   ├── domains/digicod_eu.yaml
 │   ├── domains/gunicorn_subdomains_digicod_eu.yaml
 │   ├── domains/local_digicod_eu.yaml
@@ -32,6 +34,8 @@ Die Domain-Dateien sind die normalen Bearbeitungspunkte:
 
 Der Backend-Service sieht damit die Subdomain-Pfade direkt ab `/`. Beispiel: `https://api.digicod.eu/products` kommt in Django als `/products` an.
 
+Alle Envoy-Einstellungen stehen in `envoy-parts/`. Das Python-Script laedt nur Parts, fuegt Virtual Hosts aus den Domain-Dateien in die Route-Configs ein und schreibt daraus die finalen YAML-Dateien.
+
 Mehrere Subdomains mit gleicher Route koennen in einer Datei stehen:
 
 ```yaml
@@ -41,6 +45,12 @@ base_domain: digicod.eu
 subdomains:
   - api
   - shop
+http_routes:
+  - match:
+      prefix: /
+    redirect:
+      scheme_redirect: https
+      response_code: PERMANENT_REDIRECT
 https_routes:
   - match:
       prefix: /

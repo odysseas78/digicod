@@ -16,6 +16,8 @@ ROOT = Path(__file__).resolve().parents[1]
 ADMIN_FILE = ROOT / "envoy-parts/admin/admin.yaml"
 HTTP_LISTENER_FILE = ROOT / "envoy-parts/listeners/http_redirect_listener.yaml"
 HTTPS_LISTENER_FILE = ROOT / "envoy-parts/listeners/https_listener.yaml"
+HTTP_ROUTE_CONFIG_FILE = ROOT / "envoy-parts/routes/http_redirects.yaml"
+HTTPS_ROUTE_CONFIG_FILE = ROOT / "envoy-parts/routes/https_routes.yaml"
 DOMAINS_DIR = ROOT / "envoy-parts/domains"
 CLUSTERS_FILE = ROOT / "envoy-parts/clusters/upstreams.yaml"
 OUTPUT_FILES = (
@@ -24,25 +26,6 @@ OUTPUT_FILES = (
 )
 
 ROUTE_INCLUDE_KEY = "__include_route_config__"
-
-DEFAULT_HTTP_REDIRECT_ROUTES = [
-    {
-        "match": {"prefix": "/"},
-        "redirect": {
-            "scheme_redirect": "https",
-            "response_code": "PERMANENT_REDIRECT",
-        },
-    }
-]
-
-HTTPS_RESPONSE_HEADERS = [
-    {
-        "header": {
-            "key": "response-xxxxcodes",
-            "value": "%RESPONSE_CODE%",
-        }
-    }
-]
 
 
 def require_pyyaml() -> None:
@@ -92,6 +75,17 @@ def optional_mapping(value: Any, path: Path, key: str) -> dict[str, Any] | None:
     if not isinstance(value, dict):
         raise TypeError(f"{key} must be a mapping in {path}")
     return value
+
+
+def load_route_config(path: Path, virtual_hosts: list[dict[str, Any]]) -> dict[str, Any]:
+    data = load_yaml(path)
+    route_config = optional_mapping(data.get("route_config"), path, "route_config")
+    if route_config is None:
+        raise ValueError(f"route_config is required in {path}")
+
+    route_config = copy.deepcopy(route_config)
+    route_config["virtual_hosts"] = virtual_hosts
+    return route_config
 
 
 def load_hostnames(data: dict[str, Any], path: Path) -> list[str]:
@@ -149,9 +143,9 @@ def load_domains() -> list[dict[str, Any]]:
         if not https_routes:
             raise ValueError(f"At least one HTTPS route is required in {path}")
 
-        http_routes = data.get("http_routes")
-        if http_routes is not None:
-            http_routes = require_list(http_routes, path, "http_routes")
+        http_routes = require_list(data.get("http_routes"), path, "http_routes")
+        if not http_routes:
+            raise ValueError(f"At least one HTTP route is required in {path}")
 
         typed_per_filter_config = optional_mapping(data.get("typed_per_filter_config"), path, "typed_per_filter_config")
         http_typed_per_filter_config = optional_mapping(
@@ -186,7 +180,7 @@ def build_virtual_hosts(domains: list[dict[str, Any]], route_key: str) -> list[d
 
     for domain in domains:
         if route_key == "http_routes":
-            routes = domain["http_routes"] or DEFAULT_HTTP_REDIRECT_ROUTES
+            routes = domain["http_routes"]
             name = f"{domain['name']}_http_redirect"
         else:
             routes = domain["https_routes"]
@@ -272,15 +266,14 @@ def main() -> None:
     validate_cluster_references(domains, cluster_list)
 
     route_configs = {
-        "http_redirects": {
-            "name": "http_redirects",
-            "virtual_hosts": build_virtual_hosts(domains, "http_routes"),
-        },
-        "https_routes": {
-            "name": "https_routes",
-            "response_headers_to_add": copy.deepcopy(HTTPS_RESPONSE_HEADERS),
-            "virtual_hosts": build_virtual_hosts(domains, "https_routes"),
-        },
+        HTTP_ROUTE_CONFIG_FILE.stem: load_route_config(
+            HTTP_ROUTE_CONFIG_FILE,
+            build_virtual_hosts(domains, "http_routes"),
+        ),
+        HTTPS_ROUTE_CONFIG_FILE.stem: load_route_config(
+            HTTPS_ROUTE_CONFIG_FILE,
+            build_virtual_hosts(domains, "https_routes"),
+        ),
     }
 
     http_listener = replace_route_includes(http_listener, route_configs)

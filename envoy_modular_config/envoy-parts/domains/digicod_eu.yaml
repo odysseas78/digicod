@@ -2,6 +2,12 @@ name: digicod_eu
 order: 10
 domains:
   - digicod.eu
+http_routes:
+  - match:
+      prefix: /
+    redirect:
+      scheme_redirect: https
+      response_code: PERMANENT_REDIRECT
 https_routes:
   - match:
       prefix: /
