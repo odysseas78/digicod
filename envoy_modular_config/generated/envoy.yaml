@@ -31,20 +31,15 @@ static_resources:
               - digicod.eu
               routes:
               - match:
-                  prefix: /
+                  prefix: /:path*
                 redirect:
                   scheme_redirect: https
                   response_code: PERMANENT_REDIRECT
             - name: gunicorn_subdomains_digicod_eu_http_redirect
-              domains:
-              - api.digicod.eu
-              - shop.digicod.eu
-              - accounts.digicod.eu
-              - orders.digicod.eu
-              - products.digicod.eu
+              domains: ["api.digicod.eu", "shop.digicod.eu", "accounts.digicod.eu", "www.api.digicod.eu", "www.shop.digicod.eu", "www.accounts.digicod.eu"]
               routes:
               - match:
-                  prefix: /
+                  prefix: /:path*
                 redirect:
                   scheme_redirect: https
                   response_code: PERMANENT_REDIRECT
@@ -53,7 +48,7 @@ static_resources:
               - local.digicod.eu
               routes:
               - match:
-                  prefix: /
+                  prefix: /:path*
                 redirect:
                   scheme_redirect: https
                   response_code: PERMANENT_REDIRECT
@@ -110,19 +105,17 @@ static_resources:
             name: https_routes
             virtual_hosts:
             - name: digicod_eu
-              domains: [ "://digicod.eu", "://www.digicod.eu" ]
+              domains: [ "digicod.eu", "www.digicod.eu" ]
               routes:
               - match:
-                  prefix: /
+                  prefix: /:path*
                 route:
                   cluster: service_cluster
             - name: gunicorn_subdomains_digicod_eu
-              domains: 
-              - [ "://api.digicod.eu", "://shop.digicod.eu", "://accounts.digicod.eu", "://orders.digicod.eu", "://products.digicod.eu" ]
-              - [ "://www.api.digicod.eu", "://www.shop.digicod.eu", "://www.accounts.digicod.eu", "://www.orders.digicod.eu", "://www.products.digicod.eu" ]
+              domains: ["api.digicod.eu", "shop.digicod.eu", "accounts.digicod.eu", "www.api.digicod.eu", "www.shop.digicod.eu", "www.accounts.digicod.eu"]
               routes:
               - match:
-                  prefix: /
+                  prefix: /:path*
                 route:
                   cluster: gunicorn_cluster
             - name: local_digicod_eu
@@ -130,7 +123,7 @@ static_resources:
               - local.digicod.eu
               routes:
               - match:
-                  prefix: /
+                  prefix: /:path*
                 route:
                   cluster: gunicorn_cluster
               typed_per_filter_config:
