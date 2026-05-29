@@ -1,0 +1,8 @@
+alias cp-envoy="cp -v ~/digicod/envoy_modular_config/generated/envoy.yaml /etc/envoy"
+alias restart-envoy="sudo systemctl restart envoy"
+alias restart-sysctl="sudo systemctl restart"
+alias start-sysctl="sudo systemctl start"
+alias stop-sysctl="sudo systemctl stop"
+alias status-sysctl="sudo systemctl status"
+alias enable-sysctl="sudo systemctl enable"
+alias enable-now-sysctl="sudo systemctl enable --now"
