@@ -27,10 +27,10 @@ envoy_modular_config/
 Die Domain-Dateien sind die normalen Bearbeitungspunkte:
 
 - `domains/digicod_eu.yaml`: `digicod.eu` -> `service_cluster`
-- `domains/api_digicod_eu.yaml`: `api.digicod.eu` -> `gunicorn_cluster`, mit `prefix_rewrite: /api/`
-- `domains/rest_digicod_eu.yaml`: `rest.digicod.eu` -> `gunicorn_cluster`, mit `prefix_rewrite: /rest/`
+- `domains/api_digicod_eu.yaml`: `api.digicod.eu` -> `gunicorn_cluster`
+- `domains/rest_digicod_eu.yaml`: `rest.digicod.eu` -> `gunicorn_cluster`
 
-Wenn der Backend-Service die Pfade ohne `/api/` oder `/rest/` erwartet, entferne in der jeweiligen Domain-Datei nur `prefix_rewrite`.
+Der Backend-Service sieht damit die Subdomain-Pfade direkt ab `/`. Beispiel: `https://api.digicod.eu/products` kommt in Django als `/products` an.
 
 ## Bauen
 

@@ -7,4 +7,3 @@ https_routes:
       prefix: /
     route:
       cluster: gunicorn_cluster
-      prefix_rewrite: /api/
