@@ -29,7 +29,6 @@ static_resources:
             - name: digicod_eu_http_redirect
               domains:
               - digicod.eu
-              - www.digicod.eu
               routes:
               - match:
                   prefix: /
@@ -43,11 +42,6 @@ static_resources:
               - accounts.digicod.eu
               - orders.digicod.eu
               - products.digicod.eu
-              - www.api.digicod.eu
-              - www.shop.digicod.eu
-              - www.accounts.digicod.eu
-              - www.orders.digicod.eu
-              - www.products.digicod.eu
               routes:
               - match:
                   prefix: /
@@ -57,7 +51,6 @@ static_resources:
             - name: local_digicod_eu_http_redirect
               domains:
               - local.digicod.eu
-              - www.local.digicod.eu
               routes:
               - match:
                   prefix: /
@@ -119,10 +112,9 @@ static_resources:
             - name: digicod_eu
               domains:
               - digicod.eu
-              - www.digicod.eu
               routes:
               - match:
-                  prefix: /:path*
+                  prefix: /
                 route:
                   cluster: service_cluster
             - name: gunicorn_subdomains_digicod_eu
@@ -132,23 +124,17 @@ static_resources:
               - accounts.digicod.eu
               - orders.digicod.eu
               - products.digicod.eu
-              - www.api.digicod.eu
-              - www.shop.digicod.eu
-              - www.accounts.digicod.eu
-              - www.orders.digicod.eu
-              - www.products.digicod.eu
               routes:
               - match:
-                  prefix: /:path*
+                  prefix: /
                 route:
                   cluster: gunicorn_cluster
             - name: local_digicod_eu
               domains:
               - local.digicod.eu
-              - www.local.digicod.eu
               routes:
               - match:
-                  prefix: /:path*
+                  prefix: /
                 route:
                   cluster: gunicorn_cluster
               typed_per_filter_config:
