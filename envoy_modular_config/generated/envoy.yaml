@@ -29,26 +29,38 @@ static_resources:
             - name: digicod_eu_http_redirect
               domains:
               - digicod.eu
+              - www.digicod.eu
               routes:
               - match:
-                  prefix: /:path*
+                  prefix: /
                 redirect:
                   scheme_redirect: https
                   response_code: PERMANENT_REDIRECT
             - name: gunicorn_subdomains_digicod_eu_http_redirect
-              domains: ["api.digicod.eu", "shop.digicod.eu", "accounts.digicod.eu", "www.api.digicod.eu", "www.shop.digicod.eu", "www.accounts.digicod.eu"]
+              domains:
+              - api.digicod.eu
+              - shop.digicod.eu
+              - accounts.digicod.eu
+              - orders.digicod.eu
+              - products.digicod.eu
+              - www.api.digicod.eu
+              - www.shop.digicod.eu
+              - www.accounts.digicod.eu
+              - www.orders.digicod.eu
+              - www.products.digicod.eu
               routes:
               - match:
-                  prefix: /:path*
+                  prefix: /
                 redirect:
                   scheme_redirect: https
                   response_code: PERMANENT_REDIRECT
             - name: local_digicod_eu_http_redirect
               domains:
               - local.digicod.eu
+              - www.local.digicod.eu
               routes:
               - match:
-                  prefix: /:path*
+                  prefix: /
                 redirect:
                   scheme_redirect: https
                   response_code: PERMANENT_REDIRECT
@@ -105,14 +117,26 @@ static_resources:
             name: https_routes
             virtual_hosts:
             - name: digicod_eu
-              domains: [ "digicod.eu", "www.digicod.eu" ]
+              domains:
+              - digicod.eu
+              - www.digicod.eu
               routes:
               - match:
                   prefix: /:path*
                 route:
                   cluster: service_cluster
             - name: gunicorn_subdomains_digicod_eu
-              domains: ["api.digicod.eu", "shop.digicod.eu", "accounts.digicod.eu", "www.api.digicod.eu", "www.shop.digicod.eu", "www.accounts.digicod.eu"]
+              domains:
+              - api.digicod.eu
+              - shop.digicod.eu
+              - accounts.digicod.eu
+              - orders.digicod.eu
+              - products.digicod.eu
+              - www.api.digicod.eu
+              - www.shop.digicod.eu
+              - www.accounts.digicod.eu
+              - www.orders.digicod.eu
+              - www.products.digicod.eu
               routes:
               - match:
                   prefix: /:path*
@@ -121,6 +145,7 @@ static_resources:
             - name: local_digicod_eu
               domains:
               - local.digicod.eu
+              - www.local.digicod.eu
               routes:
               - match:
                   prefix: /:path*
