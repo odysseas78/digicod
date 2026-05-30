@@ -1,0 +1,15 @@
+[Unit]
+Description=gunicorn daemon
+After=network.target
+
+[Service]
+User=user
+Group=sudo
+WorkingDirectory=/home/dcback
+#ExecStartPre=/home/dcback/systemd/bash/setenv.sh
+#EnvironmentFile=/path/to/temp-env-file
+ExecStart=/home/user/.cache/pypoetry/virtualenvs/dcback-po_-vPs_-py3.11/bin/gunicorn --workers 3 --bind 0.0.0.0:8080 --timeout=50000 config.wsgi:application --access-logfile /home/dcback/systemd/gunicorn/access.log --error-logfile /home/dcback/systemd/gunicorn/error.log
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

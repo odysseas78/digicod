@@ -1,0 +1,26 @@
+<operation name="voucherGetDetails">
+<soap:operation soapAction="https://www.neosurf.info/soap/#voucherGetDetails" style="rpc"/>
+<input>
+<soap:body use="encoded" namespace="https://www.neosurf.info/soap/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+</input>
+<output>
+<soap:body use="encoded" namespace="https://www.neosurf.info/soap/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+</output>
+</operation>
+
+<operation name="voucherGetDetails">
+<input message="tns:voucherGetDetailsRequest"/>
+<output message="tns:voucherGetDetailsResponse"/>
+</operation>
+
+<message name="voucherGetDetailsRequest">
+<part name="input" type="xsd:struct"/>
+</message>
+<message name="voucherGetDetailsResponse">
+<part name="label" type="xsd:string"/>
+<part name="status" type="xsd:string"/>
+<part name="serial" type="xsd:string"/>
+<part name="expirationDate" type="xsd:string"/>
+<part name="balance" type="xsd:string"/>
+<part name="extraDetails" type="xsd:string"/>
+</message>

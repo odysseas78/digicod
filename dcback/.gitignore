@@ -1,0 +1,17 @@
+*.pyc
+*.log
+db.sqlite3
+.idea
+static/
+django_admin_staticfiles/*
+!django_admin_staticfiles/.gitkeep
+vault_secrets.json
+.env_prod
+eee
+venv/
+woreprocess.obj
+revolut/lib/
+.vscode
+__MACOSX
+dcback.zip
+headers.obj

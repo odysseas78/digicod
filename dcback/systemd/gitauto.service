@@ -1,0 +1,13 @@
+[Unit]
+Description=git-auto daemon
+# After=network.target
+
+[Service]
+User=user
+Group=sudo
+WorkingDirectory=/home/dcback
+ExecStart= bash /home/dcback/systemd/bash/git/gitauto
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,326 @@
+[
+  {
+    "title": "Zalando",
+    "category": "GiftCard"
+  },
+  {
+    "title": "Apple",
+    "category": "GiftCard"
+  },
+  {
+    "title": "Mobile Legends",
+    "category": "GiftCard"
+  },
+  {
+    "title": "A-bon",
+    "category": "GiftCard"
+  },
+  {
+    "title": "Google Play",
+    "category": "GiftCard"
+  },
+  {
+    "title": "JetonCash",
+    "category": "GiftCard"
+  },
+  {
+    "title": "iTunes",
+    "category": "GiftCard"
+  },
+  {
+    "title": "PlayStation",
+    "category": "GiftCard"
+  },
+  {
+    "title": "Amazon",
+    "category": "GiftCard"
+  },
+  {
+    "title": "eBay",
+    "category": "GiftCard"
+  },
+  {
+    "title": "MiFinity",
+    "category": "GiftCard"
+  },
+  {
+    "title": "Crypto Voucher",
+    "category": "PaymentCard"
+  },
+  {
+    "title": "JustEat",
+    "category": "GiftCard"
+  },
+  {
+    "title": "Razer",
+    "category": "PaymentCard"
+  },
+  {
+    "title": "Free Fire",
+    "category": "GiftCard"
+  },
+  {
+    "title": "Nintendo",
+    "category": "GiftCard"
+  },
+  {
+    "title": "PUBG",
+    "category": "GiftCard"
+  },
+  {
+    "title": "Vodafone",
+    "category": "Mobile Recharge"
+  },
+  {
+    "title": "CashtoCode",
+    "category": "PaymentCard"
+  },
+  {
+    "title": "Coolblue",
+    "category": "GiftCard"
+  },
+  {
+    "title": "Walmart",
+    "category": "GiftCard"
+  },
+  {
+    "title": "Victoria\u2019s Secret",
+    "category": "GiftCard"
+  },
+  {
+    "title": "Azteco voucher lightning",
+    "category": "GiftCard"
+  },
+  {
+    "title": "Binance",
+    "category": "PaymentCard"
+  },
+  {
+    "title": "Gift Me Crypto",
+    "category": "GiftCard"
+  },
+  {
+    "title": "PCS",
+    "category": "PaymentCard"
+  },
+  {
+    "title": "Steam",
+    "category": "GiftCard"
+  },
+  {
+    "title": "Flexepin",
+    "category": "PaymentCard"
+  },
+  {
+    "title": "Grab",
+    "category": "GiftCard"
+  },
+  {
+    "title": "IMVU",
+    "category": "GiftCard"
+  },
+  {
+    "title": "League Of Legends",
+    "category": "GiftCard"
+  },
+  {
+    "title": "Xbox",
+    "category": "GiftCard"
+  },
+  {
+    "title": "Lebara",
+    "category": "Mobile Recharge"
+  },
+  {
+    "title": "Lyca",
+    "category": "Mobile Recharge"
+  },
+  {
+    "title": "Allegro",
+    "category": "GiftCard"
+  },
+  {
+    "title": "ToneoFirst",
+    "category": "PaymentCard"
+  },
+  {
+    "title": "CASHlib",
+    "category": "PaymentCard"
+  },
+  {
+    "title": "DoorDash",
+    "category": "GiftCard"
+  },
+  {
+    "title": "Ortel",
+    "category": "Mobile Recharge"
+  },
+  {
+    "title": "Base",
+    "category": "Mobile Recharge"
+  },
+  {
+    "title": "Jim Mobile",
+    "category": "Mobile Recharge"
+  },
+  {
+    "title": "GameStop",
+    "category": "GiftCard"
+  },
+  {
+    "title": "KPN",
+    "category": "Mobile Recharge"
+  },
+  {
+    "title": "Orange",
+    "category": "Mobile Recharge"
+  },
+  {
+    "title": "Adidas",
+    "category": "GiftCard"
+  },
+  {
+    "title": "Valorant",
+    "category": "GiftCard"
+  },
+  {
+    "title": "Netflix",
+    "category": "GiftCard"
+  },
+  {
+    "title": "Proximus",
+    "category": "Mobile Recharge"
+  },
+  {
+    "title": "IKEA",
+    "category": "GiftCard"
+  },
+  {
+    "title": "Dominos",
+    "category": "GiftCard"
+  },
+  {
+    "title": "Roblox",
+    "category": "GiftCard"
+  },
+  {
+    "title": "Runescape",
+    "category": "GiftCard"
+  },
+  {
+    "title": "Vectone",
+    "category": "Mobile Recharge"
+  },
+  {
+    "title": "T-Mobile",
+    "category": "Mobile Recharge"
+  },
+  {
+    "title": "Hulu",
+    "category": "GiftCard"
+  },
+  {
+    "title": "Xbox Live",
+    "category": "GiftCard"
+  },
+  {
+    "title": "FC25",
+    "category": "GiftCard"
+  },
+  {
+    "title": "Transcash",
+    "category": "PaymentCard"
+  },
+  {
+    "title": "DAZN",
+    "category": "GiftCard"
+  },
+  {
+    "title": "H&M",
+    "category": "GiftCard"
+  },
+  {
+    "title": "Apex Legends Mobile",
+    "category": "GiftCard"
+  },
+  {
+    "title": "Bitsa",
+    "category": "PaymentCard"
+  },
+  {
+    "title": "Azteco voucher on chain",
+    "category": "GiftCard"
+  },
+  {
+    "title": "Origin",
+    "category": "GiftCard"
+  },
+  {
+    "title": "Gandhi",
+    "category": "GiftCard"
+  },
+  {
+    "title": "Minecraft",
+    "category": "GiftCard"
+  },
+  {
+    "title": "Bol.com",
+    "category": "GiftCard"
+  },
+  {
+    "title": "Spotify",
+    "category": "GiftCard"
+  },
+  {
+    "title": "Blizzard",
+    "category": "GiftCard"
+  },
+  {
+    "title": "Xbox Game Pass Ultimate",
+    "category": "GiftCard"
+  },
+  {
+    "title": "Twitch",
+    "category": "GiftCard"
+  },
+  {
+    "title": "NCSOFT",
+    "category": "GiftCard"
+  },
+  {
+    "title": "Eneba",
+    "category": "GiftCard"
+  },
+  {
+    "title": "Bitnovo",
+    "category": "PaymentCard"
+  },
+  {
+    "title": "Kinguin",
+    "category": "GiftCard"
+  },
+  {
+    "title": "CDA",
+    "category": "GiftCard"
+  },
+  {
+    "title": "Microsoft",
+    "category": "GiftCard"
+  },
+  {
+    "title": "MediaMarkt",
+    "category": "GiftCard"
+  },
+  {
+    "title": "Nike",
+    "category": "GiftCard"
+  },
+  {
+    "title": "GrubHub",
+    "category": "GiftCard"
+  },
+  {
+    "title": "Fortnite",
+    "category": "GiftCard"
+  }
+]

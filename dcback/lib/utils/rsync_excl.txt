@@ -1,0 +1,12 @@
+cdnx/admin-ui/build/index.html
+cdnx/admin-ui/build/robots.txt
+cdnx/eshop-ui/build/index.html
+cdnx/eshop-ui/build/robots.txt
+cdnx/media
+cdnx/static
+eshop
+eshop_api
+shop
+pyproject.toml
+
+

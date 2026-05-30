@@ -1,0 +1,21 @@
+{
+    "Other": {
+        "Debug": false,
+        "TestModus": false,
+        "all_no_stock": false
+    },
+    "Prices": {
+        "PromNeo": 42.86,
+        "ProfitRate": 7,
+        "ProfitRateFix": 0,
+        "CurrExchFeeRate": "1"
+    },
+    "updated_at": 1727553698393,
+    "Maintenance": {
+        "ips": [
+            "94.131.159.9"
+        ],
+        "date": "2023-05-20T11:59",
+        "maintenance": false
+    }
+}

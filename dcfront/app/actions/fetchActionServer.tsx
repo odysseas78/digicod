@@ -1,0 +1,115 @@
+// app/actions/user.ts
+"use server";
+import { cookies, headers } from "next/headers";
+import parseSetCookie from '@/app/lib/parseCookie';
+// import { encrypt, decrypt } from '@/lib/xorCipher'
+// import { syncUpstreamCookies } from '@/app/actions/django-shared'
+
+function fingerprintCookieOptions() {
+  return {
+    path: "/",
+    sameSite: "lax" as const,
+    httpOnly: true,
+    secure: process.env.NODE_ENV === "production",
+    maxAge: 60 * 60 * 24 * 365,
+  }
+}
+
+const d:any = []
+
+export default async function fetchActiontServer(type:any, path: any, data: any) {
+  // const prms = { u: key, p: JSON.stringify(params)}
+  const urlParams = new URLSearchParams(data)
+
+  const cookieStore = await cookies();
+  const headerStore = await headers();
+  
+
+  const token = cookieStore.get("auth_token")?.value
+ 
+  
+  // console.log("user-agent",headerStore.get('user-agent'));
+  // const host = 'digicod.eu'
+  const header_host = headerStore.get('host')
+  // console.log("host1: ", host1);
+  /* 🔹 Cookies serialisieren */
+  const cookstor = await cookieStore.getAll()
+  const cookieMap = new Map(
+    cookstor.map((cookie:any) => [cookie.name, cookie.value])
+  )
+
+
+  const cookieHeader = Array.from(cookieMap.entries())
+    .map(([name, value]) => `${name}=${value}`)
+    .join("; ");
+
+
+  const forwardHeaders = new Headers();
+  headerStore.forEach((v:any, k:any) => {
+    // console.log(k, v);
+    k !== 'accept' && forwardHeaders.append(k, v)
+  })
+  forwardHeaders.append("Authorization", token ? `Token ${token}` : "")
+  // forwardHeaders.append("Authorization", token ? `Token ${decrypt(token, process.env.secret)}` : "")
+  forwardHeaders.append("Cookie", cookieHeader)
+  forwardHeaders.append("Content-Type", "application/json")
+
+  const u = path.split(".")
+  const env_host = process.env.HOST
+  const host = header_host === 'localhost:3000' ? env_host : header_host
+  const pth = `https://${u[0]}.${host}/${u[1] || ""}`
+  // console.log("process.env.DJANGO_API_URL: ", process.env[0]);
+  const urldss = type === "GET" ? `${pth}/${data ? "?":""}${urlParams}`:`${pth}/`
+  console.log("urldss: ", urldss);
+  const res = await fetch(urldss, {
+    method: type,
+    body:  type === "POST"? data: null,
+    headers: forwardHeaders,
+    credentials: "include",
+    cache: 'force-cache',
+    // cache: "no-store",
+    next: { revalidate: 60 }
+  });
+  // console.log(urldss);
+  // syncUpstreamCookies(res, )
+
+  // console.log(" res.headers.getSetCookie(): ",  res.headers.getSetCookie())
+   res.headers.getSetCookie().forEach((c: string) => {
+    const cook = parseSetCookie(c);
+    if (cook.name === "auth_token") cook.value = cook.value
+    // AzEJMF0VLAdeAABqIhQwIFNKAHNQSAFBCQFXJAAxXRUsB15eAQ==
+    // if (cook.name === "auth_token") cook.value = encrypt(cook.value, process.env.secret)
+    // console.log('cook: ',cook);
+  // cookieStore.set(cook)
+  });
+
+  if (!res.ok) {
+    if (res.status === 401) {
+
+      // Handle unauthorized access, e.g., clear auth cookies
+      // cookieStore.delete("auth_token")
+    
+      // console.log("401 WWWWWWWWWW: ",res)
+      return {"detail":"Invalid token Error: HTTP 401"}
+      // redirect('/login')
+    }
+  }
+
+  const contentType = res.headers.get('content-type') || ''
+
+  if (!res.ok) {
+    const text = await res.text()
+    console.log(text)
+    throw new Error(`HTTP ${res.status}: ${text.slice(0, 200000)}`)
+  }
+
+  if (contentType.includes('application/json')) {
+    const data = await res.json()
+      // console.log(data)
+    return data
+  } else {
+    const text = await res.text()
+    console.error('Kein JSON erhalten:', text.slice(0, 30000))
+    throw new Error('Response ist kein JSON')
+  }
+}

@@ -1,0 +1,13 @@
+[Unit]
+Description=prices_sync daemon
+After=network.target
+
+[Service]
+User=user
+Group=sudo
+WorkingDirectory=/home/dcback
+ExecStart=/home/user/.cache/pypoetry/virtualenvs/dcback-po_-vPs_-py3.10/bin/python /home/dcback/systemd/prices_sinc.py --timeout=500000 --error-logfile /home/dcback/systemd/prices_sync_error.log
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
