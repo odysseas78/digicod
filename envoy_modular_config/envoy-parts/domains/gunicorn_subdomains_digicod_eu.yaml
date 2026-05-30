@@ -2,11 +2,7 @@ name: gunicorn_subdomains_digicod_eu
 order: 20
 base_domain: .digicod.eu
 subdomains:
-  - api
   - shop
-  - accounts
-  - orders
-  - products
 http_routes:
   - match:
       prefix: /

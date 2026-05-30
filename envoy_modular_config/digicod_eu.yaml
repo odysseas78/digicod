@@ -37,11 +37,7 @@ static_resources:
                   response_code: PERMANENT_REDIRECT
             - name: gunicorn_subdomains_digicod_eu_http_redirect
               domains:
-              - api..digicod.eu
               - shop..digicod.eu
-              - accounts..digicod.eu
-              - orders..digicod.eu
-              - products..digicod.eu
               routes:
               - match:
                   prefix: /
@@ -119,11 +115,7 @@ static_resources:
                   cluster: service_cluster
             - name: gunicorn_subdomains_digicod_eu
               domains:
-              - api..digicod.eu
               - shop..digicod.eu
-              - accounts..digicod.eu
-              - orders..digicod.eu
-              - products..digicod.eu
               routes:
               - match:
                   prefix: /
