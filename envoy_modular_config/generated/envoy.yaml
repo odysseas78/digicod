@@ -29,6 +29,7 @@ static_resources:
             - name: digicod_eu_http_redirect
               domains:
               - digicod.eu
+              - www.digicod.eu
               routes:
               - match:
                   prefix: /
@@ -112,6 +113,7 @@ static_resources:
             - name: digicod_eu
               domains:
               - digicod.eu
+              - www.digicod.eu
               routes:
               - match:
                   prefix: /
