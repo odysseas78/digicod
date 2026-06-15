@@ -1,4 +1,0 @@
-spawn sudo apt update
-expect "password for user: "
-send "user\r"
-interact
