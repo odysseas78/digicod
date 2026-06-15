@@ -29,31 +29,64 @@ static_resources:
             - name: digicod_eu_http_redirect
               domains:
               - digicod.eu
+              - www.digicod.eu
               routes:
               - match:
                   prefix: /
                 redirect:
                   scheme_redirect: https
                   response_code: PERMANENT_REDIRECT
-            - name: api_digicod_eu_http_redirect
+            - name: gunicorn_subdomains_digicod_eu_http_redirect
               domains:
               - api.digicod.eu
+              - shop.digicod.eu
+              - accounts.digicod.eu
+              - orders.digicod.eu
+              - products.digicod.eu
               routes:
               - match:
                   prefix: /
                 redirect:
                   scheme_redirect: https
                   response_code: PERMANENT_REDIRECT
-            - name: rest_digicod_eu_http_redirect
+            - name: local_digicod_eu_http_redirect
               domains:
-              - rest.digicod.eu
+              - local.digicod.eu
               routes:
               - match:
                   prefix: /
                 redirect:
                   scheme_redirect: https
                   response_code: PERMANENT_REDIRECT
+              typed_per_filter_config:
+                envoy.filters.http.rbac:
+                  '@type': type.googleapis.com/envoy.extensions.filters.http.rbac.v3.RBACPerRoute
+                  rbac:
+                    rules:
+                      action: ALLOW
+                      policies:
+                        local_network_only:
+                          permissions:
+                          - any: true
+                          principals:
+                          - direct_remote_ip:
+                              address_prefix: 10.0.0.0
+                              prefix_len: 24
+                          - direct_remote_ip:
+                              address_prefix: 127.0.0.1
+                              prefix_len: 32
           http_filters:
+          - name: envoy.filters.http.rbac
+            typed_config:
+              '@type': type.googleapis.com/envoy.extensions.filters.http.rbac.v3.RBAC
+              rules:
+                action: ALLOW
+                policies:
+                  allow_all_by_default:
+                    permissions:
+                    - any: true
+                    principals:
+                    - any: true
           - name: envoy.filters.http.router
             typed_config:
               '@type': type.googleapis.com/envoy.extensions.filters.http.router.v3.Router
@@ -76,36 +109,65 @@ static_resources:
           codec_type: AUTO
           route_config:
             name: https_routes
-            response_headers_to_add:
-            - header:
-                key: response-xxxxcodes
-                value: '%RESPONSE_CODE%'
             virtual_hosts:
             - name: digicod_eu
               domains:
               - digicod.eu
+              - www.digicod.eu
               routes:
               - match:
                   prefix: /
                 route:
                   cluster: service_cluster
-            - name: api_digicod_eu
+            - name: gunicorn_subdomains_digicod_eu
               domains:
               - api.digicod.eu
+              - shop.digicod.eu
+              - accounts.digicod.eu
+              - orders.digicod.eu
+              - products.digicod.eu
               routes:
               - match:
                   prefix: /
                 route:
                   cluster: gunicorn_cluster
-            - name: rest_digicod_eu
+            - name: local_digicod_eu
               domains:
-              - rest.digicod.eu
+              - local.digicod.eu
               routes:
               - match:
                   prefix: /
                 route:
                   cluster: gunicorn_cluster
+              typed_per_filter_config:
+                envoy.filters.http.rbac:
+                  '@type': type.googleapis.com/envoy.extensions.filters.http.rbac.v3.RBACPerRoute
+                  rbac:
+                    rules:
+                      action: ALLOW
+                      policies:
+                        local_network_only:
+                          permissions:
+                          - any: true
+                          principals:
+                          - direct_remote_ip:
+                              address_prefix: 10.0.0.0
+                              prefix_len: 24
+                          - direct_remote_ip:
+                              address_prefix: 127.0.0.1
+                              prefix_len: 32
           http_filters:
+          - name: envoy.filters.http.rbac
+            typed_config:
+              '@type': type.googleapis.com/envoy.extensions.filters.http.rbac.v3.RBAC
+              rules:
+                action: ALLOW
+                policies:
+                  allow_all_by_default:
+                    permissions:
+                    - any: true
+                    principals:
+                    - any: true
           - name: envoy.filters.http.router
             typed_config:
               '@type': type.googleapis.com/envoy.extensions.filters.http.router.v3.Router
