@@ -1,0 +1,14 @@
+[Unit]
+Description=Envoy Proxy
+After=network.target
+
+[Service]
+Type=simple
+User=root
+Group=envoy
+ExecStart=/usr/bin/envoy -c /etc/envoy/dcfront/dcfront.yaml
+Restart=on-failure
+LimitNOFILE=4096
+
+[Install]
+WantedBy=multi-user.target

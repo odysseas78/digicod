@@ -1,0 +1,15 @@
+[Unit]
+Description=Temporal PrepaidForge product sync worker
+After=network.target
+
+[Service]
+User=user
+Group=sudo
+WorkingDirectory=/home/dcback
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/home/dcback/.venv/bin/python -u /home/dcback/manage.py start_prepaidforge_sync_worker --ensure-schedule
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

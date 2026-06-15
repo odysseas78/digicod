@@ -1,0 +1,2835 @@
+{
+    "data": [
+        {
+            "key": "Argentina",
+            "items": [
+                {
+                    "key": 1,
+                    "items": [
+                        {
+                            "key": "CACTU",
+                            "items": null,
+                            "count": 2,
+                            "summary": [
+                                3.17,
+                                2
+                            ]
+                        }
+                    ],
+                    "summary": [
+                        131.97,
+                        5
+                    ]
+                }
+            ],
+            "summary": [
+                598.58,
+                16
+            ]
+        }
+    ]
+}
+        {
+            "key": "Austria",
+            "items": [
+                {
+                    "key": 1,
+                    "items": [
+                        {
+                            "key": "ERNSH",
+                            "items": null,
+                            "count": 10,
+                            "summary": [
+                                2004.74,
+                                10
+                            ]
+                        },
+                        {
+                            "key": "PICCO",
+                            "items": null,
+                            "count": 2,
+                            "summary": [
+                                213.83,
+                                2
+                            ]
+                        }
+                    ],
+                    "summary": [
+                        2218.57,
+                        12
+                    ]
+                },
+                {
+                    "key": 2,
+                    "items": [
+                        {
+                            "key": "ERNSH",
+                            "items": null,
+                            "count": 10,
+                            "summary": [
+                                2611.76,
+                                10
+                            ]
+                        },
+                        {
+                            "key": "PICCO",
+                            "items": null,
+                            "count": 5,
+                            "summary": [
+                                454.07,
+                                5
+                            ]
+                        }
+                    ],
+                    "summary": [
+                        3065.83,
+                        15
+                    ]
+                },
+                {
+                    "key": 3,
+                    "items": [
+                        {
+                            "key": "ERNSH",
+                            "items": null,
+                            "count": 10,
+                            "summary": [
+                                1588.89,
+                                10
+                            ]
+                        },
+                        {
+                            "key": "PICCO",
+                            "items": null,
+                            "count": 3,
+                            "summary": [
+                                518.21,
+                                3
+                            ]
+                        }
+                    ],
+                    "summary": [
+                        2107.1,
+                        13
+                    ]
+                }
+            ],
+            "summary": [
+                7391.5,
+                40
+            ]
+        },
+        {
+            "key": "Belgium",
+            "items": [
+                {
+                    "key": 1,
+                    "items": [
+                        {
+                            "key": "MAISD",
+                            "items": null,
+                            "count": 2,
+                            "summary": [
+                                200.48,
+                                2
+                            ]
+                        },
+                        {
+                            "key": "SUPRD",
+                            "items": null,
+                            "count": 1,
+                            "summary": [
+                                68.52,
+                                1
+                            ]
+                        }
+                    ],
+                    "summary": [
+                        269,
+                        3
+                    ]
+                },
+                {
+                    "key": 2,
+                    "items": [
+                        {
+                            "key": "MAISD",
+                            "items": null,
+                            "count": 3,
+                            "summary": [
+                                219.78,
+                                3
+                            ]
+                        },
+                        {
+                            "key": "SUPRD",
+                            "items": null,
+                            "count": 5,
+                            "summary": [
+                                511.63,
+                                5
+                            ]
+                        }
+                    ],
+                    "summary": [
+                        731.41,
+                        8
+                    ]
+                },
+                {
+                    "key": 3,
+                    "items": [
+                        {
+                            "key": "MAISD",
+                            "items": null,
+                            "count": 2,
+                            "summary": [
+                                38.65,
+                                2
+                            ]
+                        },
+                        {
+                            "key": "SUPRD",
+                            "items": null,
+                            "count": 6,
+                            "summary": [
+                                241.08,
+                                6
+                            ]
+                        }
+                    ],
+                    "summary": [
+                        279.73,
+                        8
+                    ]
+                }
+            ],
+            "summary": [
+                1280.14,
+                19
+            ]
+        },
+        {
+            "key": "Brazil",
+            "items": [
+                {
+                    "key": 1,
+                    "items": [
+                        {
+                            "key": "COMMI",
+                            "items": null,
+                            "count": 3,
+                            "summary": [
+                                121.62,
+                                3
+                            ]
+                        },
+                        {
+                            "key": "FAMIA",
+                            "items": null,
+                            "count": 1,
+                            "summary": [
+                                3.01,
+                                1
+                            ]
+                        },
+                        {
+                            "key": "GOURL",
+                            "items": null,
+                            "count": 2,
+                            "summary": [
+                                36.57,
+                                2
+                            ]
+                        },
+                        {
+                            "key": "HANAR",
+                            "items": null,
+                            "count": 6,
+                            "summary": [
+                                171.38,
+                                6
+                            ]
+                        },
+                        {
+                            "key": "QUEDE",
+                            "items": null,
+                            "count": 5,
+                            "summary": [
+                                263.03,
+                                5
+                            ]
+                        },
+                        {
+                            "key": "QUEEN",
+                            "items": null,
+                            "count": 7,
+                            "summary": [
+                                583.69,
+                                7
+                            ]
+                        },
+                        {
+                            "key": "RICAR",
+                            "items": null,
+                            "count": 3,
+                            "summary": [
+                                245.99,
+                                3
+                            ]
+                        },
+                        {
+                            "key": "WELLI",
+                            "items": null,
+                            "count": 4,
+                            "summary": [
+                                117.63,
+                                4
+                            ]
+                        }
+                    ],
+                    "summary": [
+                        1542.92,
+                        31
+                    ]
+                },
+                {
+                    "key": 2,
+                    "items": [
+                        {
+                            "key": "COMMI",
+                            "items": null,
+                            "count": 2,
+                            "summary": [
+                                66.2,
+                                2
+                            ]
+                        },
+                        {
+                            "key": "FAMIA",
+                            "items": null,
+                            "count": 1,
+                            "summary": [
+                                3.53,
+                                1
+                            ]
+                        },
+                        {
+                            "key": "GOURL",
+                            "items": null,
+                            "count": 4,
+                            "summary": [
+                                48.88,
+                                4
+                            ]
+                        },
+                        {
+                            "key": "HANAR",
+                            "items": null,
+                            "count": 5,
+                            "summary": [
+                                448.62,
+                                5
+                            ]
+                        },
+                        {
+                            "key": "QUEDE",
+                            "items": null,
+                            "count": 4,
+                            "summary": [
+                                64.52,
+                                4
+                            ]
+                        },
+                        {
+                            "key": "QUEEN",
+                            "items": null,
+                            "count": 6,
+                            "summary": [
+                                1399.01,
+                                6
+                            ]
+                        },
+                        {
+                            "key": "RICAR",
+                            "items": null,
+                            "count": 6,
+                            "summary": [
+                                323.23,
+                                6
+                            ]
+                        },
+                        {
+                            "key": "TRADH",
+                            "items": null,
+                            "count": 3,
+                            "summary": [
+                                129.95,
+                                3
+                            ]
+                        },
+                        {
+                            "key": "WELLI",
+                            "items": null,
+                            "count": 4,
+                            "summary": [
+                                29.49,
+                                4
+                            ]
+                        }
+                    ],
+                    "summary": [
+                        2513.43,
+                        35
+                    ]
+                },
+                {
+                    "key": 3,
+                    "items": [
+                        {
+                            "key": "FAMIA",
+                            "items": null,
+                            "count": 5,
+                            "summary": [
+                                226.21,
+                                5
+                            ]
+                        },
+                        {
+                            "key": "GOURL",
+                            "items": null,
+                            "count": 3,
+                            "summary": [
+                                236.93,
+                                3
+                            ]
+                        },
+                        {
+                            "key": "HANAR",
+                            "items": null,
+                            "count": 3,
+                            "summary": [
+                                104.77,
+                                3
+                            ]
+                        },
+                        {
+                            "key": "RICAR",
+                            "items": null,
+                            "count": 2,
+                            "summary": [
+                                63.73,
+                                2
+                            ]
+                        },
+                        {
+                            "key": "TRADH",
+                            "items": null,
+                            "count": 3,
+                            "summary": [
+                                144.61,
+                                3
+                            ]
+                        },
+                        {
+                            "key": "WELLI",
+                            "items": null,
+                            "count": 1,
+                            "summary": [
+                                47.59,
+                                1
+                            ]
+                        }
+                    ],
+                    "summary": [
+                        823.84,
+                        17
+                    ]
+                }
+            ],
+            "summary": [
+                4880.19,
+                83
+            ]
+        },
+        {
+            "key": "Canada",
+            "items": [
+                {
+                    "key": 1,
+                    "items": [
+                        {
+                            "key": "BOTTM",
+                            "items": null,
+                            "count": 3,
+                            "summary": [
+                                129.42,
+                                3
+                            ]
+                        },
+                        {
+                            "key": "MEREP",
+                            "items": null,
+                            "count": 1,
+                            "summary": [
+                                154.68,
+                                1
+                            ]
+                        }
+                    ],
+                    "summary": [
+                        284.1,
+                        4
+                    ]
+                },
+                {
+                    "key": 2,
+                    "items": [
+                        {
+                            "key": "BOTTM",
+                            "items": null,
+                            "count": 3,
+                            "summary": [
+                                162.17,
+                                3
+                            ]
+                        },
+                        {
+                            "key": "MEREP",
+                            "items": null,
+                            "count": 7,
+                            "summary": [
+                                903.53,
+                                7
+                            ]
+                        }
+                    ],
+                    "summary": [
+                        1065.7,
+                        10
+                    ]
+                },
+                {
+                    "key": 3,
+                    "items": [
+                        {
+                            "key": "BOTTM",
+                            "items": null,
+                            "count": 8,
+                            "summary": [
+                                502.36,
+                                8
+                            ]
+                        },
+                        {
+                            "key": "LAUGB",
+                            "items": null,
+                            "count": 3,
+                            "summary": [
+                                9.92,
+                                3
+                            ]
+                        },
+                        {
+                            "key": "MEREP",
+                            "items": null,
+                            "count": 5,
+                            "summary": [
+                                336.01,
+                                5
+                            ]
+                        }
+                    ],
+                    "summary": [
+                        848.29,
+                        16
+                    ]
+                }
+            ],
+            "summary": [
+                2198.09,
+                30
+            ]
+        },
+        {
+            "key": "Denmark",
+            "items": [
+                {
+                    "key": 1,
+                    "items": [
+                        {
+                            "key": "SIMOB",
+                            "items": null,
+                            "count": 2,
+                            "summary": [
+                                34.19,
+                                2
+                            ]
+                        },
+                        {
+                            "key": "VAFFE",
+                            "items": null,
+                            "count": 4,
+                            "summary": [
+                                366.65,
+                                4
+                            ]
+                        }
+                    ],
+                    "summary": [
+                        400.84,
+                        6
+                    ]
+                },
+                {
+                    "key": 2,
+                    "items": [
+                        {
+                            "key": "SIMOB",
+                            "items": null,
+                            "count": 2,
+                            "summary": [
+                                275.7,
+                                2
+                            ]
+                        },
+                        {
+                            "key": "VAFFE",
+                            "items": null,
+                            "count": 3,
+                            "summary": [
+                                329.21,
+                                3
+                            ]
+                        }
+                    ],
+                    "summary": [
+                        604.91,
+                        5
+                    ]
+                },
+                {
+                    "key": 3,
+                    "items": [
+                        {
+                            "key": "SIMOB",
+                            "items": null,
+                            "count": 3,
+                            "summary": [
+                                138.96,
+                                3
+                            ]
+                        },
+                        {
+                            "key": "VAFFE",
+                            "items": null,
+                            "count": 4,
+                            "summary": [
+                                251.48,
+                                4
+                            ]
+                        }
+                    ],
+                    "summary": [
+                        390.44,
+                        7
+                    ]
+                }
+            ],
+            "summary": [
+                1396.19,
+                18
+            ]
+        },
+        {
+            "key": "Finland",
+            "items": [
+                {
+                    "key": 1,
+                    "items": [
+                        {
+                            "key": "WARTH",
+                            "items": null,
+                            "count": 4,
+                            "summary": [
+                                236.96,
+                                4
+                            ]
+                        },
+                        {
+                            "key": "WILMK",
+                            "items": null,
+                            "count": 4,
+                            "summary": [
+                                41.05,
+                                4
+                            ]
+                        }
+                    ],
+                    "summary": [
+                        278.01,
+                        8
+                    ]
+                },
+                {
+                    "key": 2,
+                    "items": [
+                        {
+                            "key": "WARTH",
+                            "items": null,
+                            "count": 5,
+                            "summary": [
+                                399.58,
+                                5
+                            ]
+                        }
+                    ],
+                    "summary": [
+                        399.58,
+                        5
+                    ]
+                },
+                {
+                    "key": 3,
+                    "items": [
+                        {
+                            "key": "WARTH",
+                            "items": null,
+                            "count": 6,
+                            "summary": [
+                                185.94,
+                                6
+                            ]
+                        },
+                        {
+                            "key": "WILMK",
+                            "items": null,
+                            "count": 3,
+                            "summary": [
+                                47.36,
+                                3
+                            ]
+                        }
+                    ],
+                    "summary": [
+                        233.3,
+                        9
+                    ]
+                }
+            ],
+            "summary": [
+                910.89,
+                22
+            ]
+        },
+        {
+            "key": "France",
+            "items": [
+                {
+                    "key": 1,
+                    "items": [
+                        {
+                            "key": "BLONP",
+                            "items": null,
+                            "count": 5,
+                            "summary": [
+                                217.96,
+                                5
+                            ]
+                        },
+                        {
+                            "key": "BONAP",
+                            "items": null,
+                            "count": 6,
+                            "summary": [
+                                341.16,
+                                6
+                            ]
+                        },
+                        {
+                            "key": "DUMON",
+                            "items": null,
+                            "count": 2,
+                            "summary": [
+                                37.16,
+                                2
+                            ]
+                        },
+                        {
+                            "key": "FOLIG",
+                            "items": null,
+                            "count": 1,
+                            "summary": [
+                                11.26,
+                                1
+                            ]
+                        },
+                        {
+                            "key": "FRANR",
+                            "items": null,
+                            "count": 1,
+                            "summary": [
+                                30.34,
+                                1
+                            ]
+                        },
+                        {
+                            "key": "LACOR",
+                            "items": null,
+                            "count": 2,
+                            "summary": [
+                                72.3,
+                                2
+                            ]
+                        },
+                        {
+                            "key": "LAMAI",
+                            "items": null,
+                            "count": 6,
+                            "summary": [
+                                340.35,
+                                6
+                            ]
+                        },
+                        {
+                            "key": "SPECD",
+                            "items": null,
+                            "count": 1,
+                            "summary": [
+                                2.91,
+                                1
+                            ]
+                        },
+                        {
+                            "key": "VICTE",
+                            "items": null,
+                            "count": 2,
+                            "summary": [
+                                90.53,
+                                2
+                            ]
+                        },
+                        {
+                            "key": "VINET",
+                            "items": null,
+                            "count": 1,
+                            "summary": [
+                                6.01,
+                                1
+                            ]
+                        }
+                    ],
+                    "summary": [
+                        1149.98,
+                        27
+                    ]
+                },
+                {
+                    "key": 2,
+                    "items": [
+                        {
+                            "key": "BLONP",
+                            "items": null,
+                            "count": 3,
+                            "summary": [
+                                215.7,
+                                3
+                            ]
+                        },
+                        {
+                            "key": "BONAP",
+                            "items": null,
+                            "count": 7,
+                            "summary": [
+                                419.57,
+                                7
+                            ]
+                        },
+                        {
+                            "key": "DUMON",
+                            "items": null,
+                            "count": 1,
+                            "summary": [
+                                1.85,
+                                1
+                            ]
+                        },
+                        {
+                            "key": "FOLIG",
+                            "items": null,
+                            "count": 2,
+                            "summary": [
+                                101.95,
+                                2
+                            ]
+                        },
+                        {
+                            "key": "FRANR",
+                            "items": null,
+                            "count": 1,
+                            "summary": [
+                                121.82,
+                                1
+                            ]
+                        },
+                        {
+                            "key": "LACOR",
+                            "items": null,
+                            "count": 2,
+                            "summary": [
+                                15.19,
+                                2
+                            ]
+                        },
+                        {
+                            "key": "LAMAI",
+                            "items": null,
+                            "count": 4,
+                            "summary": [
+                                211.04,
+                                4
+                            ]
+                        },
+                        {
+                            "key": "SPECD",
+                            "items": null,
+                            "count": 2,
+                            "summary": [
+                                96.18,
+                                2
+                            ]
+                        },
+                        {
+                            "key": "VICTE",
+                            "items": null,
+                            "count": 5,
+                            "summary": [
+                                72.25,
+                                5
+                            ]
+                        },
+                        {
+                            "key": "VINET",
+                            "items": null,
+                            "count": 2,
+                            "summary": [
+                                8.94,
+                                2
+                            ]
+                        }
+                    ],
+                    "summary": [
+                        1264.49,
+                        29
+                    ]
+                },
+                {
+                    "key": 3,
+                    "items": [
+                        {
+                            "key": "BLONP",
+                            "items": null,
+                            "count": 3,
+                            "summary": [
+                                190,
+                                3
+                            ]
+                        },
+                        {
+                            "key": "BONAP",
+                            "items": null,
+                            "count": 4,
+                            "summary": [
+                                597.14,
+                                4
+                            ]
+                        },
+                        {
+                            "key": "DUMON",
+                            "items": null,
+                            "count": 1,
+                            "summary": [
+                                24.69,
+                                1
+                            ]
+                        },
+                        {
+                            "key": "FOLIG",
+                            "items": null,
+                            "count": 2,
+                            "summary": [
+                                524.73,
+                                2
+                            ]
+                        },
+                        {
+                            "key": "FRANR",
+                            "items": null,
+                            "count": 1,
+                            "summary": [
+                                19.26,
+                                1
+                            ]
+                        },
+                        {
+                            "key": "LAMAI",
+                            "items": null,
+                            "count": 4,
+                            "summary": [
+                                84.43,
+                                4
+                            ]
+                        },
+                        {
+                            "key": "SPECD",
+                            "items": null,
+                            "count": 1,
+                            "summary": [
+                                9.19,
+                                1
+                            ]
+                        },
+                        {
+                            "key": "VICTE",
+                            "items": null,
+                            "count": 3,
+                            "summary": [
+                                330.47,
+                                3
+                            ]
+                        },
+                        {
+                            "key": "VINET",
+                            "items": null,
+                            "count": 2,
+                            "summary": [
+                                43.46,
+                                2
+                            ]
+                        }
+                    ],
+                    "summary": [
+                        1823.37,
+                        21
+                    ]
+                }
+            ],
+            "summary": [
+                4237.84,
+                77
+            ]
+        },
+        {
+            "key": "Germany",
+            "items": [
+                {
+                    "key": 1,
+                    "items": [
+                        {
+                            "key": "ALFKI",
+                            "items": null,
+                            "count": 4,
+                            "summary": [
+                                95.03,
+                                4
+                            ]
+                        },
+                        {
+                            "key": "BLAUS",
+                            "items": null,
+                            "count": 1,
+                            "summary": [
+                                0.15,
+                                1
+                            ]
+                        },
+                        {
+                            "key": "DRACD",
+                            "items": null,
+                            "count": 1,
+                            "summary": [
+                                79.25,
+                                1
+                            ]
+                        },
+                        {
+                            "key": "FRANK",
+                            "items": null,
+                            "count": 5,
+                            "summary": [
+                                575.89,
+                                5
+                            ]
+                        },
+                        {
+                            "key": "KOENE",
+                            "items": null,
+                            "count": 3,
+                            "summary": [
+                                46.04,
+                                3
+                            ]
+                        },
+                        {
+                            "key": "LEHMS",
+                            "items": null,
+                            "count": 6,
+                            "summary": [
+                                436.57,
+                                6
+                            ]
+                        },
+                        {
+                            "key": "MORGK",
+                            "items": null,
+                            "count": 2,
+                            "summary": [
+                                137.56,
+                                2
+                            ]
+                        },
+                        {
+                            "key": "OTTIK",
+                            "items": null,
+                            "count": 3,
+                            "summary": [
+                                358.27,
+                                3
+                            ]
+                        },
+                        {
+                            "key": "QUICK",
+                            "items": null,
+                            "count": 11,
+                            "summary": [
+                                1746.33,
+                                11
+                            ]
+                        },
+                        {
+                            "key": "TOMSP",
+                            "items": null,
+                            "count": 2,
+                            "summary": [
+                                26.29,
+                                2
+                            ]
+                        },
+                        {
+                            "key": "WANDK",
+                            "items": null,
+                            "count": 3,
+                            "summary": [
+                                170.58,
+                                3
+                            ]
+                        }
+                    ],
+                    "summary": [
+                        3671.96,
+                        41
+                    ]
+                },
+                {
+                    "key": 2,
+                    "items": [
+                        {
+                            "key": "ALFKI",
+                            "items": null,
+                            "count": 1,
+                            "summary": [
+                                61.02,
+                                1
+                            ]
+                        },
+                        {
+                            "key": "BLAUS",
+                            "items": null,
+                            "count": 3,
+                            "summary": [
+                                126.19,
+                                3
+                            ]
+                        },
+                        {
+                            "key": "DRACD",
+                            "items": null,
+                            "count": 2,
+                            "summary": [
+                                41.33,
+                                2
+                            ]
+                        },
+                        {
+                            "key": "FRANK",
+                            "items": null,
+                            "count": 7,
+                            "summary": [
+                                340.99,
+                                7
+                            ]
+                        },
+                        {
+                            "key": "KOENE",
+                            "items": null,
+                            "count": 6,
+                            "summary": [
+                                446.07,
+                                6
+                            ]
+                        },
+                        {
+                            "key": "LEHMS",
+                            "items": null,
+                            "count": 8,
+                            "summary": [
+                                548.45,
+                                8
+                            ]
+                        },
+                        {
+                            "key": "MORGK",
+                            "items": null,
+                            "count": 1,
+                            "summary": [
+                                58.13,
+                                1
+                            ]
+                        },
+                        {
+                            "key": "OTTIK",
+                            "items": null,
+                            "count": 5,
+                            "summary": [
+                                307.61,
+                                5
+                            ]
+                        },
+                        {
+                            "key": "QUICK",
+                            "items": null,
+                            "count": 9,
+                            "summary": [
+                                1672.57,
+                                9
+                            ]
+                        },
+                        {
+                            "key": "TOMSP",
+                            "items": null,
+                            "count": 4,
+                            "summary": [
+                                99.68,
+                                4
+                            ]
+                        },
+                        {
+                            "key": "WANDK",
+                            "items": null,
+                            "count": 7,
+                            "summary": [
+                                262.29,
+                                7
+                            ]
+                        }
+                    ],
+                    "summary": [
+                        3964.33,
+                        53
+                    ]
+                },
+                {
+                    "key": 3,
+                    "items": [
+                        {
+                            "key": "ALFKI",
+                            "items": null,
+                            "count": 1,
+                            "summary": [
+                                69.53,
+                                1
+                            ]
+                        },
+                        {
+                            "key": "BLAUS",
+                            "items": null,
+                            "count": 3,
+                            "summary": [
+                                41.92,
+                                3
+                            ]
+                        },
+                        {
+                            "key": "DRACD",
+                            "items": null,
+                            "count": 3,
+                            "summary": [
+                                185.46,
+                                3
+                            ]
+                        },
+                        {
+                            "key": "FRANK",
+                            "items": null,
+                            "count": 3,
+                            "summary": [
+                                486.56,
+                                3
+                            ]
+                        },
+                        {
+                            "key": "KOENE",
+                            "items": null,
+                            "count": 5,
+                            "summary": [
+                                321.57,
+                                5
+                            ]
+                        },
+                        {
+                            "key": "LEHMS",
+                            "items": null,
+                            "count": 1,
+                            "summary": [
+                                32.01,
+                                1
+                            ]
+                        },
+                        {
+                            "key": "MORGK",
+                            "items": null,
+                            "count": 2,
+                            "summary": [
+                                126.35,
+                                2
+                            ]
+                        },
+                        {
+                            "key": "OTTIK",
+                            "items": null,
+                            "count": 2,
+                            "summary": [
+                                196.86,
+                                2
+                            ]
+                        },
+                        {
+                            "key": "QUICK",
+                            "items": null,
+                            "count": 8,
+                            "summary": [
+                                2186.73,
+                                8
+                            ]
+                        }
+                    ],
+                    "summary": [
+                        3646.99,
+                        28
+                    ]
+                }
+            ],
+            "summary": [
+                11283.28,
+                122
+            ]
+        },
+        {
+            "key": "Ireland",
+            "items": [
+                {
+                    "key": 1,
+                    "items": [
+                        {
+                            "key": "HUNGO",
+                            "items": null,
+                            "count": 4,
+                            "summary": [
+                                262.71,
+                                4
+                            ]
+                        }
+                    ],
+                    "summary": [
+                        262.71,
+                        4
+                    ]
+                },
+                {
+                    "key": 2,
+                    "items": [
+                        {
+                            "key": "HUNGO",
+                            "items": null,
+                            "count": 9,
+                            "summary": [
+                                1890.41,
+                                9
+                            ]
+                        }
+                    ],
+                    "summary": [
+                        1890.41,
+                        9
+                    ]
+                },
+                {
+                    "key": 3,
+                    "items": [
+                        {
+                            "key": "HUNGO",
+                            "items": null,
+                            "count": 6,
+                            "summary": [
+                                602.12,
+                                6
+                            ]
+                        }
+                    ],
+                    "summary": [
+                        602.12,
+                        6
+                    ]
+                }
+            ],
+            "summary": [
+                2755.24,
+                19
+            ]
+        },
+        {
+            "key": "Italy",
+            "items": [
+                {
+                    "key": 1,
+                    "items": [
+                        {
+                            "key": "FRANS",
+                            "items": null,
+                            "count": 5,
+                            "summary": [
+                                64.15,
+                                5
+                            ]
+                        },
+                        {
+                            "key": "MAGAA",
+                            "items": null,
+                            "count": 2,
+                            "summary": [
+                                182.9,
+                                2
+                            ]
+                        },
+                        {
+                            "key": "REGGC",
+                            "items": null,
+                            "count": 7,
+                            "summary": [
+                                205.6,
+                                7
+                            ]
+                        }
+                    ],
+                    "summary": [
+                        452.65,
+                        14
+                    ]
+                },
+                {
+                    "key": 2,
+                    "items": [
+                        {
+                            "key": "FRANS",
+                            "items": null,
+                            "count": 1,
+                            "summary": [
+                                10.98,
+                                1
+                            ]
+                        },
+                        {
+                            "key": "MAGAA",
+                            "items": null,
+                            "count": 4,
+                            "summary": [
+                                101.44,
+                                4
+                            ]
+                        },
+                        {
+                            "key": "REGGC",
+                            "items": null,
+                            "count": 4,
+                            "summary": [
+                                96.01,
+                                4
+                            ]
+                        }
+                    ],
+                    "summary": [
+                        208.43,
+                        9
+                    ]
+                },
+                {
+                    "key": 3,
+                    "items": [
+                        {
+                            "key": "MAGAA",
+                            "items": null,
+                            "count": 4,
+                            "summary": [
+                                185.41,
+                                4
+                            ]
+                        },
+                        {
+                            "key": "REGGC",
+                            "items": null,
+                            "count": 1,
+                            "summary": [
+                                17.95,
+                                1
+                            ]
+                        }
+                    ],
+                    "summary": [
+                        203.36,
+                        5
+                    ]
+                }
+            ],
+            "summary": [
+                864.44,
+                28
+            ]
+        },
+        {
+            "key": "Mexico",
+            "items": [
+                {
+                    "key": 1,
+                    "items": [
+                        {
+                            "key": "ANATR",
+                            "items": null,
+                            "count": 1,
+                            "summary": [
+                                43.9,
+                                1
+                            ]
+                        },
+                        {
+                            "key": "ANTON",
+                            "items": null,
+                            "count": 2,
+                            "summary": [
+                                63.09,
+                                2
+                            ]
+                        },
+                        {
+                            "key": "PERIC",
+                            "items": null,
+                            "count": 1,
+                            "summary": [
+                                69.32,
+                                1
+                            ]
+                        }
+                    ],
+                    "summary": [
+                        176.31,
+                        4
+                    ]
+                },
+                {
+                    "key": 2,
+                    "items": [
+                        {
+                            "key": "ANTON",
+                            "items": null,
+                            "count": 3,
+                            "summary": [
+                                116.56,
+                                3
+                            ]
+                        },
+                        {
+                            "key": "PERIC",
+                            "items": null,
+                            "count": 2,
+                            "summary": [
+                                108.44,
+                                2
+                            ]
+                        },
+                        {
+                            "key": "TORTU",
+                            "items": null,
+                            "count": 5,
+                            "summary": [
+                                303.13,
+                                5
+                            ]
+                        }
+                    ],
+                    "summary": [
+                        528.13,
+                        10
+                    ]
+                },
+                {
+                    "key": 3,
+                    "items": [
+                        {
+                            "key": "ANATR",
+                            "items": null,
+                            "count": 3,
+                            "summary": [
+                                53.52,
+                                3
+                            ]
+                        },
+                        {
+                            "key": "ANTON",
+                            "items": null,
+                            "count": 2,
+                            "summary": [
+                                88.87,
+                                2
+                            ]
+                        },
+                        {
+                            "key": "CENTC",
+                            "items": null,
+                            "count": 1,
+                            "summary": [
+                                3.25,
+                                1
+                            ]
+                        },
+                        {
+                            "key": "PERIC",
+                            "items": null,
+                            "count": 3,
+                            "summary": [
+                                100.2,
+                                3
+                            ]
+                        },
+                        {
+                            "key": "TORTU",
+                            "items": null,
+                            "count": 5,
+                            "summary": [
+                                172.5,
+                                5
+                            ]
+                        }
+                    ],
+                    "summary": [
+                        418.34,
+                        14
+                    ]
+                }
+            ],
+            "summary": [
+                1122.78,
+                28
+            ]
+        },
+        {
+            "key": "Norway",
+            "items": [
+                {
+                    "key": 1,
+                    "items": [
+                        {
+                            "key": "SANTG",
+                            "items": null,
+                            "count": 1,
+                            "summary": [
+                                13.37,
+                                1
+                            ]
+                        }
+                    ],
+                    "summary": [
+                        13.37,
+                        1
+                    ]
+                },
+                {
+                    "key": 2,
+                    "items": [
+                        {
+                            "key": "SANTG",
+                            "items": null,
+                            "count": 4,
+                            "summary": [
+                                223.49,
+                                4
+                            ]
+                        }
+                    ],
+                    "summary": [
+                        223.49,
+                        4
+                    ]
+                },
+                {
+                    "key": 3,
+                    "items": [
+                        {
+                            "key": "SANTG",
+                            "items": null,
+                            "count": 1,
+                            "summary": [
+                                38.64,
+                                1
+                            ]
+                        }
+                    ],
+                    "summary": [
+                        38.64,
+                        1
+                    ]
+                }
+            ],
+            "summary": [
+                275.5,
+                6
+            ]
+        },
+        {
+            "key": "Poland",
+            "items": [
+                {
+                    "key": 1,
+                    "items": [
+                        {
+                            "key": "WOLZA",
+                            "items": null,
+                            "count": 1,
+                            "summary": [
+                                8.72,
+                                1
+                            ]
+                        }
+                    ],
+                    "summary": [
+                        8.72,
+                        1
+                    ]
+                },
+                {
+                    "key": 2,
+                    "items": [
+                        {
+                            "key": "WOLZA",
+                            "items": null,
+                            "count": 2,
+                            "summary": [
+                                100.96,
+                                2
+                            ]
+                        }
+                    ],
+                    "summary": [
+                        100.96,
+                        2
+                    ]
+                },
+                {
+                    "key": 3,
+                    "items": [
+                        {
+                            "key": "WOLZA",
+                            "items": null,
+                            "count": 4,
+                            "summary": [
+                                66.06,
+                                4
+                            ]
+                        }
+                    ],
+                    "summary": [
+                        66.06,
+                        4
+                    ]
+                }
+            ],
+            "summary": [
+                175.74,
+                7
+            ]
+        },
+        {
+            "key": "Portugal",
+            "items": [
+                {
+                    "key": 1,
+                    "items": [
+                        {
+                            "key": "FURIB",
+                            "items": null,
+                            "count": 1,
+                            "summary": [
+                                7.46,
+                                1
+                            ]
+                        },
+                        {
+                            "key": "PRINI",
+                            "items": null,
+                            "count": 1,
+                            "summary": [
+                                60.26,
+                                1
+                            ]
+                        }
+                    ],
+                    "summary": [
+                        67.72,
+                        2
+                    ]
+                },
+                {
+                    "key": 2,
+                    "items": [
+                        {
+                            "key": "FURIB",
+                            "items": null,
+                            "count": 1,
+                            "summary": [
+                                89,
+                                1
+                            ]
+                        },
+                        {
+                            "key": "PRINI",
+                            "items": null,
+                            "count": 3,
+                            "summary": [
+                                230.77,
+                                3
+                            ]
+                        }
+                    ],
+                    "summary": [
+                        319.77,
+                        4
+                    ]
+                },
+                {
+                    "key": 3,
+                    "items": [
+                        {
+                            "key": "FURIB",
+                            "items": null,
+                            "count": 6,
+                            "summary": [
+                                182.21,
+                                6
+                            ]
+                        },
+                        {
+                            "key": "PRINI",
+                            "items": null,
+                            "count": 1,
+                            "summary": [
+                                73.83,
+                                1
+                            ]
+                        }
+                    ],
+                    "summary": [
+                        256.04,
+                        7
+                    ]
+                }
+            ],
+            "summary": [
+                643.53,
+                13
+            ]
+        },
+        {
+            "key": "Spain",
+            "items": [
+                {
+                    "key": 1,
+                    "items": [
+                        {
+                            "key": "BOLID",
+                            "items": null,
+                            "count": 1,
+                            "summary": [
+                                16.16,
+                                1
+                            ]
+                        },
+                        {
+                            "key": "GALED",
+                            "items": null,
+                            "count": 2,
+                            "summary": [
+                                20.05,
+                                2
+                            ]
+                        },
+                        {
+                            "key": "GODOS",
+                            "items": null,
+                            "count": 3,
+                            "summary": [
+                                100.5,
+                                3
+                            ]
+                        },
+                        {
+                            "key": "ROMEY",
+                            "items": null,
+                            "count": 3,
+                            "summary": [
+                                48.62,
+                                3
+                            ]
+                        }
+                    ],
+                    "summary": [
+                        185.33,
+                        9
+                    ]
+                },
+                {
+                    "key": 2,
+                    "items": [
+                        {
+                            "key": "BOLID",
+                            "items": null,
+                            "count": 2,
+                            "summary": [
+                                175.01,
+                                2
+                            ]
+                        },
+                        {
+                            "key": "GALED",
+                            "items": null,
+                            "count": 1,
+                            "summary": [
+                                10.14,
+                                1
+                            ]
+                        },
+                        {
+                            "key": "GODOS",
+                            "items": null,
+                            "count": 4,
+                            "summary": [
+                                354.6,
+                                4
+                            ]
+                        },
+                        {
+                            "key": "ROMEY",
+                            "items": null,
+                            "count": 1,
+                            "summary": [
+                                8.29,
+                                1
+                            ]
+                        }
+                    ],
+                    "summary": [
+                        548.04,
+                        8
+                    ]
+                },
+                {
+                    "key": 3,
+                    "items": [
+                        {
+                            "key": "GALED",
+                            "items": null,
+                            "count": 2,
+                            "summary": [
+                                7.79,
+                                2
+                            ]
+                        },
+                        {
+                            "key": "GODOS",
+                            "items": null,
+                            "count": 3,
+                            "summary": [
+                                113.17,
+                                3
+                            ]
+                        },
+                        {
+                            "key": "ROMEY",
+                            "items": null,
+                            "count": 1,
+                            "summary": [
+                                7.56,
+                                1
+                            ]
+                        }
+                    ],
+                    "summary": [
+                        128.52,
+                        6
+                    ]
+                }
+            ],
+            "summary": [
+                861.89,
+                23
+            ]
+        },
+        {
+            "key": "Sweden",
+            "items": [
+                {
+                    "key": 1,
+                    "items": [
+                        {
+                            "key": "BERGS",
+                            "items": null,
+                            "count": 5,
+                            "summary": [
+                                189.44,
+                                5
+                            ]
+                        },
+                        {
+                            "key": "FOLKO",
+                            "items": null,
+                            "count": 9,
+                            "summary": [
+                                779.26,
+                                9
+                            ]
+                        }
+                    ],
+                    "summary": [
+                        968.7,
+                        14
+                    ]
+                },
+                {
+                    "key": 2,
+                    "items": [
+                        {
+                            "key": "BERGS",
+                            "items": null,
+                            "count": 9,
+                            "summary": [
+                                1074.51,
+                                9
+                            ]
+                        },
+                        {
+                            "key": "FOLKO",
+                            "items": null,
+                            "count": 6,
+                            "summary": [
+                                672.4,
+                                6
+                            ]
+                        }
+                    ],
+                    "summary": [
+                        1746.91,
+                        15
+                    ]
+                },
+                {
+                    "key": 3,
+                    "items": [
+                        {
+                            "key": "BERGS",
+                            "items": null,
+                            "count": 4,
+                            "summary": [
+                                295.57,
+                                4
+                            ]
+                        },
+                        {
+                            "key": "FOLKO",
+                            "items": null,
+                            "count": 4,
+                            "summary": [
+                                226.42,
+                                4
+                            ]
+                        }
+                    ],
+                    "summary": [
+                        521.99,
+                        8
+                    ]
+                }
+            ],
+            "summary": [
+                3237.6,
+                37
+            ]
+        },
+        {
+            "key": "Switzerland",
+            "items": [
+                {
+                    "key": 1,
+                    "items": [
+                        {
+                            "key": "CHOPS",
+                            "items": null,
+                            "count": 3,
+                            "summary": [
+                                171.68,
+                                3
+                            ]
+                        },
+                        {
+                            "key": "RICSU",
+                            "items": null,
+                            "count": 1,
+                            "summary": [
+                                78.85,
+                                1
+                            ]
+                        }
+                    ],
+                    "summary": [
+                        250.53,
+                        4
+                    ]
+                },
+                {
+                    "key": 2,
+                    "items": [
+                        {
+                            "key": "CHOPS",
+                            "items": null,
+                            "count": 3,
+                            "summary": [
+                                72.37,
+                                3
+                            ]
+                        },
+                        {
+                            "key": "RICSU",
+                            "items": null,
+                            "count": 5,
+                            "summary": [
+                                420.41,
+                                5
+                            ]
+                        }
+                    ],
+                    "summary": [
+                        492.78,
+                        8
+                    ]
+                },
+                {
+                    "key": 3,
+                    "items": [
+                        {
+                            "key": "CHOPS",
+                            "items": null,
+                            "count": 2,
+                            "summary": [
+                                123.19,
+                                2
+                            ]
+                        },
+                        {
+                            "key": "RICSU",
+                            "items": null,
+                            "count": 4,
+                            "summary": [
+                                502.03,
+                                4
+                            ]
+                        }
+                    ],
+                    "summary": [
+                        625.22,
+                        6
+                    ]
+                }
+            ],
+            "summary": [
+                1368.53,
+                18
+            ]
+        },
+        {
+            "key": "UK",
+            "items": [
+                {
+                    "key": 1,
+                    "items": [
+                        {
+                            "key": "AROUT",
+                            "items": null,
+                            "count": 1,
+                            "summary": [
+                                41.95,
+                                1
+                            ]
+                        },
+                        {
+                            "key": "CONSH",
+                            "items": null,
+                            "count": 1,
+                            "summary": [
+                                6.17,
+                                1
+                            ]
+                        },
+                        {
+                            "key": "EASTC",
+                            "items": null,
+                            "count": 4,
+                            "summary": [
+                                348.37,
+                                4
+                            ]
+                        },
+                        {
+                            "key": "ISLAT",
+                            "items": null,
+                            "count": 2,
+                            "summary": [
+                                157.05,
+                                2
+                            ]
+                        },
+                        {
+                            "key": "SEVES",
+                            "items": null,
+                            "count": 3,
+                            "summary": [
+                                182.34,
+                                3
+                            ]
+                        }
+                    ],
+                    "summary": [
+                        735.88,
+                        11
+                    ]
+                },
+                {
+                    "key": 2,
+                    "items": [
+                        {
+                            "key": "AROUT",
+                            "items": null,
+                            "count": 8,
+                            "summary": [
+                                358.54,
+                                8
+                            ]
+                        },
+                        {
+                            "key": "BSBEV",
+                            "items": null,
+                            "count": 3,
+                            "summary": [
+                                129.26,
+                                3
+                            ]
+                        },
+                        {
+                            "key": "CONSH",
+                            "items": null,
+                            "count": 2,
+                            "summary": [
+                                47.45,
+                                2
+                            ]
+                        },
+                        {
+                            "key": "EASTC",
+                            "items": null,
+                            "count": 1,
+                            "summary": [
+                                278.96,
+                                1
+                            ]
+                        },
+                        {
+                            "key": "ISLAT",
+                            "items": null,
+                            "count": 6,
+                            "summary": [
+                                136.08,
+                                6
+                            ]
+                        },
+                        {
+                            "key": "SEVES",
+                            "items": null,
+                            "count": 3,
+                            "summary": [
+                                283.39,
+                                3
+                            ]
+                        }
+                    ],
+                    "summary": [
+                        1233.68,
+                        23
+                    ]
+                },
+                {
+                    "key": 3,
+                    "items": [
+                        {
+                            "key": "AROUT",
+                            "items": null,
+                            "count": 4,
+                            "summary": [
+                                71.46,
+                                4
+                            ]
+                        },
+                        {
+                            "key": "BSBEV",
+                            "items": null,
+                            "count": 7,
+                            "summary": [
+                                152.05,
+                                7
+                            ]
+                        },
+                        {
+                            "key": "EASTC",
+                            "items": null,
+                            "count": 3,
+                            "summary": [
+                                205.01,
+                                3
+                            ]
+                        },
+                        {
+                            "key": "ISLAT",
+                            "items": null,
+                            "count": 2,
+                            "summary": [
+                                70.52,
+                                2
+                            ]
+                        },
+                        {
+                            "key": "NORTS",
+                            "items": null,
+                            "count": 3,
+                            "summary": [
+                                37.59,
+                                3
+                            ]
+                        },
+                        {
+                            "key": "SEVES",
+                            "items": null,
+                            "count": 3,
+                            "summary": [
+                                448.08,
+                                3
+                            ]
+                        }
+                    ],
+                    "summary": [
+                        984.71,
+                        22
+                    ]
+                }
+            ],
+            "summary": [
+                2954.27,
+                56
+            ]
+        },
+        {
+            "key": "USA",
+            "items": [
+                {
+                    "key": 1,
+                    "items": [
+                        {
+                            "key": "GREAL",
+                            "items": null,
+                            "count": 1,
+                            "summary": [
+                                57.15,
+                                1
+                            ]
+                        },
+                        {
+                            "key": "HUNGC",
+                            "items": null,
+                            "count": 3,
+                            "summary": [
+                                156.62,
+                                3
+                            ]
+                        },
+                        {
+                            "key": "LONEP",
+                            "items": null,
+                            "count": 3,
+                            "summary": [
+                                39.53,
+                                3
+                            ]
+                        },
+                        {
+                            "key": "OLDWO",
+                            "items": null,
+                            "count": 3,
+                            "summary": [
+                                237.9,
+                                3
+                            ]
+                        },
+                        {
+                            "key": "RATTC",
+                            "items": null,
+                            "count": 3,
+                            "summary": [
+                                245.54,
+                                3
+                            ]
+                        },
+                        {
+                            "key": "SAVEA",
+                            "items": null,
+                            "count": 11,
+                            "summary": [
+                                1389.62,
+                                11
+                            ]
+                        },
+                        {
+                            "key": "SPLIR",
+                            "items": null,
+                            "count": 2,
+                            "summary": [
+                                45.31,
+                                2
+                            ]
+                        },
+                        {
+                            "key": "THECR",
+                            "items": null,
+                            "count": 1,
+                            "summary": [
+                                20.25,
+                                1
+                            ]
+                        },
+                        {
+                            "key": "WHITC",
+                            "items": null,
+                            "count": 4,
+                            "summary": [
+                                102.8,
+                                4
+                            ]
+                        }
+                    ],
+                    "summary": [
+                        2294.72,
+                        31
+                    ]
+                },
+                {
+                    "key": 2,
+                    "items": [
+                        {
+                            "key": "GREAL",
+                            "items": null,
+                            "count": 7,
+                            "summary": [
+                                921.48,
+                                7
+                            ]
+                        },
+                        {
+                            "key": "HUNGC",
+                            "items": null,
+                            "count": 1,
+                            "summary": [
+                                20.12,
+                                1
+                            ]
+                        },
+                        {
+                            "key": "LAZYK",
+                            "items": null,
+                            "count": 1,
+                            "summary": [
+                                11.92,
+                                1
+                            ]
+                        },
+                        {
+                            "key": "LETSS",
+                            "items": null,
+                            "count": 4,
+                            "summary": [
+                                202.11,
+                                4
+                            ]
+                        },
+                        {
+                            "key": "LONEP",
+                            "items": null,
+                            "count": 4,
+                            "summary": [
+                                39.8,
+                                4
+                            ]
+                        },
+                        {
+                            "key": "OLDWO",
+                            "items": null,
+                            "count": 2,
+                            "summary": [
+                                78.26,
+                                2
+                            ]
+                        },
+                        {
+                            "key": "RATTC",
+                            "items": null,
+                            "count": 7,
+                            "summary": [
+                                445.3,
+                                7
+                            ]
+                        },
+                        {
+                            "key": "SAVEA",
+                            "items": null,
+                            "count": 9,
+                            "summary": [
+                                3200.8,
+                                9
+                            ]
+                        },
+                        {
+                            "key": "SPLIR",
+                            "items": null,
+                            "count": 6,
+                            "summary": [
+                                500.4,
+                                6
+                            ]
+                        },
+                        {
+                            "key": "THEBI",
+                            "items": null,
+                            "count": 2,
+                            "summary": [
+                                20.48,
+                                2
+                            ]
+                        },
+                        {
+                            "key": "THECR",
+                            "items": null,
+                            "count": 1,
+                            "summary": [
+                                94.8,
+                                1
+                            ]
+                        },
+                        {
+                            "key": "TRAIH",
+                            "items": null,
+                            "count": 2,
+                            "summary": [
+                                63.01,
+                                2
+                            ]
+                        },
+                        {
+                            "key": "WHITC",
+                            "items": null,
+                            "count": 5,
+                            "summary": [
+                                180.1,
+                                5
+                            ]
+                        }
+                    ],
+                    "summary": [
+                        5778.58,
+                        51
+                    ]
+                },
+                {
+                    "key": 3,
+                    "items": [
+                        {
+                            "key": "GREAL",
+                            "items": null,
+                            "count": 3,
+                            "summary": [
+                                108.98,
+                                3
+                            ]
+                        },
+                        {
+                            "key": "HUNGC",
+                            "items": null,
+                            "count": 1,
+                            "summary": [
+                                30.34,
+                                1
+                            ]
+                        },
+                        {
+                            "key": "LAZYK",
+                            "items": null,
+                            "count": 1,
+                            "summary": [
+                                7.48,
+                                1
+                            ]
+                        },
+                        {
+                            "key": "LONEP",
+                            "items": null,
+                            "count": 1,
+                            "summary": [
+                                0.53,
+                                1
+                            ]
+                        },
+                        {
+                            "key": "OLDWO",
+                            "items": null,
+                            "count": 5,
+                            "summary": [
+                                667.37,
+                                5
+                            ]
+                        },
+                        {
+                            "key": "RATTC",
+                            "items": null,
+                            "count": 8,
+                            "summary": [
+                                1443.37,
+                                8
+                            ]
+                        },
+                        {
+                            "key": "SAVEA",
+                            "items": null,
+                            "count": 11,
+                            "summary": [
+                                2093.28,
+                                11
+                            ]
+                        },
+                        {
+                            "key": "SPLIR",
+                            "items": null,
+                            "count": 1,
+                            "summary": [
+                                12.96,
+                                1
+                            ]
+                        },
+                        {
+                            "key": "THEBI",
+                            "items": null,
+                            "count": 2,
+                            "summary": [
+                                241.61,
+                                2
+                            ]
+                        },
+                        {
+                            "key": "THECR",
+                            "items": null,
+                            "count": 1,
+                            "summary": [
+                                14.91,
+                                1
+                            ]
+                        },
+                        {
+                            "key": "TRAIH",
+                            "items": null,
+                            "count": 1,
+                            "summary": [
+                                7,
+                                1
+                            ]
+                        },
+                        {
+                            "key": "WHITC",
+                            "items": null,
+                            "count": 5,
+                            "summary": [
+                                1070.16,
+                                5
+                            ]
+                        }
+                    ],
+                    "summary": [
+                        5697.99,
+                        40
+                    ]
+                }
+            ],
+            "summary": [
+                13771.29,
+                122
+            ]
+        },
+        {
+            "key": "Venezuela",
+            "items": [
+                {
+                    "key": 1,
+                    "items": [
+                        {
+                            "key": "HILAA",
+                            "items": null,
+                            "count": 7,
+                            "summary": [
+                                454.59,
+                                7
+                            ]
+                        },
+                        {
+                            "key": "LILAS",
+                            "items": null,
+                            "count": 5,
+                            "summary": [
+                                68.84,
+                                5
+                            ]
+                        },
+                        {
+                            "key": "LINOD",
+                            "items": null,
+                            "count": 5,
+                            "summary": [
+                                297.91,
+                                5
+                            ]
+                        }
+                    ],
+                    "summary": [
+                        821.34,
+                        17
+                    ]
+                },
+                {
+                    "key": 2,
+                    "items": [
+                        {
+                            "key": "HILAA",
+                            "items": null,
+                            "count": 8,
+                            "summary": [
+                                612.89,
+                                8
+                            ]
+                        },
+                        {
+                            "key": "LILAS",
+                            "items": null,
+                            "count": 4,
+                            "summary": [
+                                388.07,
+                                4
+                            ]
+                        },
+                        {
+                            "key": "LINOD",
+                            "items": null,
+                            "count": 4,
+                            "summary": [
+                                151.96,
+                                4
+                            ]
+                        }
+                    ],
+                    "summary": [
+                        1152.92,
+                        16
+                    ]
+                },
+                {
+                    "key": 3,
+                    "items": [
+                        {
+                            "key": "GROSR",
+                            "items": null,
+                            "count": 2,
+                            "summary": [
+                                67.8,
+                                2
+                            ]
+                        },
+                        {
+                            "key": "HILAA",
+                            "items": null,
+                            "count": 3,
+                            "summary": [
+                                191.68,
+                                3
+                            ]
+                        },
+                        {
+                            "key": "LILAS",
+                            "items": null,
+                            "count": 5,
+                            "summary": [
+                                277.5,
+                                5
+                            ]
+                        },
+                        {
+                            "key": "LINOD",
+                            "items": null,
+                            "count": 3,
+                            "summary": [
+                                223.94,
+                                3
+                            ]
+                        }
+                    ],
+                    "summary": [
+                        760.92,
+                        13
+                    ]
+                }
+            ],
+            "summary": [
+                2735.18,
+                46
+            ]
+        }
+    ],
+    "summary": [
+        64942.69
+    ]
+}

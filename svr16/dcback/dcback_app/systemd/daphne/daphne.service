@@ -1,0 +1,19 @@
+[Unit]
+Description=Daphne service
+After=network.target
+
+[Service]
+Type=simple
+User=user
+WorkingDirectory=/home/dcback
+ExecStart=/home/user/.cache/pypoetry/virtualenvs/dcback-po_-vPs_-py3.11/bin/daphne --bind 0.0.0.0:4000 --websocket_timeout 86400 config.asgi:application
+Restart=always
+StandardOutput=journal
+StandardError=journal
+StartLimitBurst=2
+#StartLimitInterval=600
+# Restart, but not more than once every 30s (for testing purposes)
+StartLimitInterval=2
+
+[Install]
+WantedBy=multi-user.target

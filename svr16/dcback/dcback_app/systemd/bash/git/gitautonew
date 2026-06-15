@@ -1,0 +1,42 @@
+#!/bin/bash
+
+# Funktion, um die Änderungen zu extrahieren und in den Commit-Text einzufügen
+create_commit_message() {
+  repo_path=$1
+  commit_message=""
+
+  # Wechseln Sie zum Repository-Verzeichnis
+  cd "$repo_path" || exit
+
+  # Fügen Sie alle Änderungen hinzu
+  git add -A
+
+  # Holen Sie sich die Liste der geänderten Dateien
+  changed_files=$(git diff --cached --name-only)
+
+  # Wenn es keine Änderungen gibt, abbrechen
+  if [ -z "$changed_files" ]; then
+    return
+  fi
+
+  # Erstellen Sie die Commit-Nachricht
+  commit_message="Files:"
+  for file in $changed_files; do
+    commit_message="$commit_message $file;"
+    # commit_message+="$(git diff --cached -- "$file")\n"
+  done
+
+  # Commit mit der erstellten Nachricht
+  git commit -m "$commit_message"
+}
+
+# Endlosschleife zum regelmäßigen Committen
+while true; do
+  sleep 10
+  
+  # Änderungen im ersten Repository committen
+  create_commit_message "/home/dcui"
+  
+  # Änderungen im zweiten Repository committen
+  create_commit_message "/home/dcback"
+done

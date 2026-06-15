@@ -1,0 +1,7 @@
+psqlpg_restore -h hostname -d dbname -U username filename.sql
+psql databasename < data_base_dump
+\l
+postgres=# \l+
+\dt
+python3 manage.py migrate eshop zero
+psql
